@@ -7,12 +7,12 @@ This data visualization, I use healthcare dataset by kaggle. It’s made for my 
 
 ## About Dataset
 The dataset includes various columns, each providing specific details about patients. Below is a brief description of each column used:
-*Gender : Patient’s gender, either “Male” or “Female.”
-*Medical Condition : Primary medical condition or diagnosis (e.g., “Diabetes,” “Hypertension”, “Arthritis”, “Cancer”).
-*Hospital : Healthcare facility or hospital where the patient was admitted.
-*Admission Type : Type of admission (“Emergency,” “Elective,” or “Urgent”).
-*Test Results : Results of medical tests during admission (“Normal,” “Abnormal,” “Inconclusive”).
-*Date of Admission : Date of patient admission to the healthcare facility.
+* Gender : Patient’s gender, either “Male” or “Female.”
+* Medical Condition : Primary medical condition or diagnosis (e.g., “Diabetes,” “Hypertension”, “Arthritis”, “Cancer”).
+* Hospital : Healthcare facility or hospital where the patient was admitted.
+* Admission Type : Type of admission (“Emergency,” “Elective,” or “Urgent”).
+* Test Results : Results of medical tests during admission (“Normal,” “Abnormal,” “Inconclusive”).
+* Date of Admission : Date of patient admission to the healthcare facility.
 
 
 
