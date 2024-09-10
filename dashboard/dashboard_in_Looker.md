@@ -14,5 +14,7 @@ The dataset includes various columns, each providing specific details about pati
 * Test Results : Results of medical tests during admission (“Normal,” “Abnormal,” “Inconclusive”).
 * Date of Admission : Date of patient admission to the healthcare facility.
 
+## Dashboard 
 
 
+Link : https://lookerstudio.google.com/s/mv7pigeZGgM
