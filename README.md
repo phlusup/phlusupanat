@@ -1,3 +1,3 @@
 # Hi, I am Phlu !
-Supanat Kritsana
+Supanat Kritsana 
 SQL, R, Python, Statistics and Classical ML.
