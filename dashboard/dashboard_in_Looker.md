@@ -15,6 +15,6 @@ The dataset includes various columns, each providing specific details about pati
 * Date of Admission : Date of patient admission to the healthcare facility.
 
 ## Dashboard 
-
+![mydashboard](https://snoozemonday.wordpress.com/2024/09/09/data-visualization-with-google-looker-studio-healthcare-dataset-by-kaggle/.jpg)
 
 Link : https://lookerstudio.google.com/s/mv7pigeZGgM
