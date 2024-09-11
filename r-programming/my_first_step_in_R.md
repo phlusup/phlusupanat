@@ -3,10 +3,10 @@
 2. [About Dataset](#introduction)
 3. [Exploratory Data Analysis](#introduction)
      1. [What is the correlation between the carat of the diamonds and the price ?](#subparagraph1)
-     2. [How many car used transmissions between automatic and manual ?](#subparagraph1)
-     3. [What is the correlation between weight and mpg of cars ?](#subparagraph1)
-     4. [Find the type of diamond cuts by the color ?](#subparagraph1)
-     5. [Find the box plot of chicken weights by feed types ?](#subparagraph1)
+     2. [How many car used transmissions between automatic and manual ?](#subparagraph2)
+     3. [What is the correlation between weight and mpg of cars ?](#subparagraph3)
+     4. [Find the type of diamond cuts by the color ?](#subparagraph4)
+     5. [Find the box plot of chicken weights by feed types ?](#subparagraph5)
 ## Introduction <a name="introduction"></a>
 I shared basic R programming skill with Five Questions by Datasets for R Practice. ( diamonds, mtcars and chickwts)
 
@@ -51,7 +51,7 @@ ggplot(small_df,aes(carat, price, col = cut)) +
 ![g1](https://snoozemonday.wordpress.com/wp-content/uploads/2024/09/1.png)
 
 Conclusion : When the carat weight increases then the price of diamonds increases. All quality of the cut have the same pattern
-### How many car used transmissions between automatic and manual ? <a name="subparagraph1"></a>
+### How many car used transmissions between automatic and manual ? <a name="subparagraph2"></a>
 This question, I used all data of dataset ( mtcars). I’m a filter some columns in dataset ( hp, wt, and am ). In aesthetic mappings in define x axis = am and color divided by am.
 ```R
 mtcars %>%
@@ -66,7 +66,7 @@ mtcars %>%
 
 Conclusion : An automatic transmissions cars approximately nearly 19 and Manual cars nearly 13.
 
-### What is the correlation between weight and mpg of cars ? <a name="subparagraph1"></a>
+### What is the correlation between weight and mpg of cars ? <a name="subparagraph3"></a>
 This question, I used all data of dataset ( mtcars). I’m a filter some columns in dataset ( hp, wt, and mpg) and provided in mtcars_df. In aesthetic mappings in define x axis = wt, y axis = mpg. I applied linear regression in for find correlation between weight and mpg of cars.
 ```R
 mtcars_df <- mtcars %>%
@@ -83,7 +83,7 @@ cor(mtcars$wt, mtcars$mpg)
 
 Conclusion : Correlation between weight and mpg of cars is -0.868. A fairly strong negative correlation. It affected to the slope of a line that is trending downwards. It means that as the weight of cars increases then the mpg of cars decreases.
 
-### Find the type of diamond cuts by the color ? <a name="subparagraph1"></a>
+### Find the type of diamond cuts by the color ? <a name="subparagraph4"></a>
 This question, I want to know about proportion in diamonds. In aesthetic mappings in define x axis = diamond color and color divided by quality of the cut.
 ```R
 ggplot(diamonds,aes(color,fill = cut)) +
@@ -95,7 +95,7 @@ labs(title = 'Bar chart of color and cut of diamonds')
 
 Conclusion : The ideal diamonds have the greatest proportion than others.
 
-### Find the box plot of chicken weights by feed types ? <a name="subparagraph1"></a>
+### Find the box plot of chicken weights by feed types ? <a name="subparagraph5"></a>
 ```R
 df34 <- chickwts %>%
   select(weight,feed)
