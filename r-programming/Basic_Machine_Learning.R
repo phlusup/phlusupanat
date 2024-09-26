@@ -212,9 +212,44 @@ accuracy <- mean(p == test_data$diabetes)
 rpart.plot(tree_model$finalModel)
 
 
+-------------------------------------------------------------------------
 
+# Random Forest with K-Fold CV
 
+data("PimaIndiansDiabetes")
+df <- PimaIndiansDiabetes
 
+# Inspect data 
+glimpse(df)
+head(df)
+tail(df)
+
+sum(is.na(df))
+
+# split data 
+set.seed(42)
+n <- nrow(df)
+id <- sample(1:n, size = n*0.8, replace = FALSE)
+train_data <- df[id, ]
+test_data <- df[-id, ]
+
+# train model
+
+set.seed(42)
+ctrl <- trainControl(method = "cv",
+                     number = 5)
+rf_model <- train(diabetes ~ .,
+                    data = train_data,
+                    method = "rf",
+                    tuneLength = 5,
+                    trControl = ctrl)
+# test model 
+
+p <- predict(rf_model, newdata = test_data)
+
+# accuracy 
+
+accuracy <- mean(p == test_data$diabetes)
 
 
 
