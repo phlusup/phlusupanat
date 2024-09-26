@@ -9,7 +9,7 @@ library("tidyverse")
 library("caret")
 library("mlbench")
 
-# load dataset for regression KNN
+# load dataset for regression
 data()
 data("BostonHousing")
 df <- BostonHousing
@@ -32,7 +32,7 @@ id <- sample(1:n, size = n*0.7, replace = FALSE)
 train_data <- df[id, ]
 test_data <- df[-id, ]
 
-## train model 
+## train model KNN with K-Fold CV
 set.seed(42)
 ctrl <- trainControl(method = "cv",
                      number = 5,
@@ -52,8 +52,9 @@ p <- predict(knn_model, newdata = test_data)
 
 rmse <- sqrt(mean((p-test_data$medv)**2))
 
+-------------------------------------------------------------------------
 
-# linear regression 
+# linear regression model
 
 data()
 data("BostonHousing")
@@ -88,8 +89,9 @@ p <- predict(lm_model, newdata = test_data)
 
 rmse <- sqrt(mean((p - test_data$medv)**2))
 
+-------------------------------------------------------------------------
 
-# logistic regression 
+# logistic regression with K-Fold CV
 data()
 data("PimaIndiansDiabetes")
 df <- PimaIndiansDiabetes
@@ -126,8 +128,9 @@ p <- predict(glm_model, newdata = test_data)
 accuracy  <- mean( p == test_data$diabetes)
 
 
+-------------------------------------------------------------------------
 
-# ElasticNet Model 
+# ElasticNet Model with K-Fold CV
 
 data("PimaIndiansDiabetes")
 df <- PimaIndiansDiabetes
