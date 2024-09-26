@@ -2,13 +2,14 @@
 install.packages("tidyverse")
 install.packages("caret")
 install.packages("mlbench")
-
+-------------------------------------------------------------------------
 # load package 
 
 library("tidyverse")
 library("caret")
 library("mlbench")
-
+library("rpart.plot")
+-------------------------------------------------------------------------
 # load dataset for regression
 data()
 data("BostonHousing")
@@ -168,8 +169,47 @@ p <- predict(enet_model, newdata = test_data)
 
 accuracy <- mean(p == test_data$diabetes)
 
+-------------------------------------------------------------------------
 
+# Decision Tree with K-Fold CV
 
+data("PimaIndiansDiabetes")
+df <- PimaIndiansDiabetes
+
+# Inspect data 
+glimpse(df)
+head(df)
+tail(df)
+
+sum(is.na(df))
+
+# split data 
+set.seed(42)
+n <- nrow(df)
+id <- sample(1:n, size = n*0.8, replace = FALSE)
+train_data <- df[id, ]
+test_data <- df[-id, ]
+
+# train model
+
+set.seed(42)
+ctrl <- trainControl(method = "cv",
+                     number = 5)
+tree_model <- train(diabetes ~ .,
+                    data = train_data,
+                    method = "rpart",
+                    trControl = ctrl)
+# test model 
+
+p <- predict(tree_model, newdata = test_data)
+
+# accuracy 
+
+accuracy <- mean(p == test_data$diabetes)
+
+# final model 
+
+rpart.plot(tree_model$finalModel)
 
 
 
