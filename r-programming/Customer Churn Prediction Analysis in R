@@ -1,0 +1,172 @@
+# install package
+install.packages("tidyverse")
+install.packages("caret")
+install.packages("gridExtra")
+# load package 
+
+library("tidyverse")
+library("caret")
+library("gridExtra")
+# read csv file 
+
+df <- read_csv("customer_churn_data.csv")
+
+
+# data preprocessing
+
+View(df)
+glimpse(df)
+head(df)
+tail(df)
+summary(df)
+
+## check columns name
+
+names(df)
+
+### convert columns name to lower case 
+
+names(df) <- tolower(names(df))
+
+## check missing value 
+
+sum(is.na(df))
+
+## delete value in internetservice column is None
+
+df <- df %>%
+  filter( internetservice != "None")
+
+
+## convert character to factor 
+
+df <- df %>%
+  mutate_if(is.character, as.factor)
+
+# exploration data analysis
+
+## create the individual plots
+
+p1 <- ggplot(df, aes(gender, fill = churn)) + 
+  geom_bar(position = position_dodge()) + 
+  theme_minimal() +
+  ggtitle("Gender by Churn") +
+  theme(plot.title = element_text(hjust = 0.5))
+  
+p2 <- ggplot(df, aes(contracttype, fill = churn)) + 
+  geom_bar(position = position_dodge()) + 
+  theme_minimal() +
+  ggtitle("Contract Type by Churn") +
+  theme(plot.title = element_text(hjust = 0.5))
+  
+p3 <- ggplot(df, aes(internetservice, fill = churn)) + 
+  geom_bar(position = position_dodge()) + 
+  theme_minimal() +
+  ggtitle("Internet Service by Churn") +
+  theme(plot.title = element_text(hjust = 0.5))
+  
+p4 <- ggplot(df, aes(churn, monthlycharges, fill = churn)) +
+  geom_boxplot() + 
+  theme_minimal() + 
+  ggtitle("Monthly Charges vs. Churn") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# arrange the plots in a grid
+
+grid.arrange(p1, p2, p3, p4, ncol = 2)
+  
+
+
+  
+  
+# Built Basic Machine Learning Model
+# split data 
+set.seed(42)
+n <- nrow(df)
+id <- sample(1:n, size = 0.8*n, replace = FALSE)
+train_data <- df[id, ] 
+test_data <- df[-id, ]
+
+# train model logistic regression + K-Fold CV 
+set.seed(42)
+ctrl <- trainControl(method = "cv",
+                     number = 5)
+logit_model <- train(churn ~ tenure + monthlycharges + age,
+                     data = train_data,
+                     method = "glm",
+                     trControl = ctrl)
+
+# test model 
+
+p_logit <- predict(logit_model, newdata = test_data)
+
+# confusion matrix
+
+confusionMatrix(p_logit, test_data$churn, positive = "Yes",mode = "prec_recall")
+
+accuracy_logit <- round(mean( p_logit == test_data$churn), 4)
+
+
+print(paste0("Logistic Regression Accuracy : ", accuracy_logit*100))
+
+------------------------------------------------------------------------------
+
+# train model decision tree with K-Fold CV 
+set.seed(42)
+ctrl <- trainControl(method = "cv",
+                     number = 5,
+                     verboseIter = TRUE)
+tree_model <- train(churn ~ tenure + monthlycharges + age,
+                     data = train_data,
+                     method = "rpart",
+                     trControl = ctrl)
+
+# test model 
+
+p_tree <- predict(tree_model, newdata = test_data)
+
+# confusion matrix
+
+confusionMatrix(p_tree, test_data$churn, positive = "Yes",mode = "prec_recall")
+
+accuracy_tree <- round(mean( p_tree == test_data$churn),4)
+
+print(paste0("Decision Tree Accuracy : ", accuracy_tree*100))
+
+------------------------------------------------------------------------------
+
+# Random forest with K-Fold CV
+
+set.seed(42)
+ctrl <- trainControl(method = "cv",
+                     number = 5,
+                     verboseIter = TRUE)
+rf_model <- train(churn ~ tenure + monthlycharges + age,
+                    data = train_data,
+                    method = "rf",
+                    trControl = ctrl)
+
+# test model 
+
+p_rf <- predict(rf_model, newdata = test_data)
+
+# confusion matrix
+
+confusionMatrix(p_rf, test_data$churn, positive = "Yes",mode = "prec_recall")
+
+accuracy_rf <- round(mean( p_rf == test_data$churn), 4)
+
+print(paste0("Random Forest Accuracy : ", accuracy_rf*100))
+
+
+# Conclusion Accuracy
+
+cat("Logistic Regression Accuracy : ", accuracy_logit*100,
+    "\nDecision Tree Accurary : ", accuracy_tree*100,
+    "\nRandom Forest Accuracy : ", accuracy_rf*100)
+
+
+
+
+
+
