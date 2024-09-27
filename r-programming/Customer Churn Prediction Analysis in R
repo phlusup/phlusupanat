@@ -1,51 +1,58 @@
-# install package
+# Install package
 install.packages("tidyverse")
 install.packages("caret")
 install.packages("gridExtra")
-# load package 
 
+# Load package 
 library("tidyverse")
 library("caret")
 library("gridExtra")
-# read csv file 
 
+
+# Read csv file 
 df <- read_csv("customer_churn_data.csv")
 
-
-# data preprocessing
-
+# Data preprocessing
 View(df)
 glimpse(df)
 head(df)
 tail(df)
+names(df)
 summary(df)
 
-## check columns name
-
+## Check columns name
 names(df)
 
-### convert columns name to lower case 
-
+## Change column names to lowercase and Check missing value
 names(df) <- tolower(names(df))
-
-## check missing value 
-
 sum(is.na(df))
 
-## delete value in internetservice column is None
+
+df%>%
+  select(internetservice) %>%
+  group_by(internetservice) %>%
+  count()
+
+## create a new data frame without the customerid and techsupport column and Removes all rows containing "None" values 
 
 df <- df %>%
-  filter( internetservice != "None")
+  select(-1, -9) %>%
+  filter(internetservice != "None")
 
+df%>%
+  select(internetservice) %>%
+  group_by(internetservice) %>%
+  count()
 
-## convert character to factor 
+## Convert character data type to factor data type
 
 df <- df %>%
   mutate_if(is.character, as.factor)
+glimpse(df)
 
-# exploration data analysis
+# Exploration data analysis
 
-## create the individual plots
+## Create the individual plots
 
 p1 <- ggplot(df, aes(gender, fill = churn)) + 
   geom_bar(position = position_dodge()) + 
@@ -71,7 +78,7 @@ p4 <- ggplot(df, aes(churn, monthlycharges, fill = churn)) +
   ggtitle("Monthly Charges vs. Churn") +
   theme(plot.title = element_text(hjust = 0.5))
 
-# arrange the plots in a grid
+## Arrange the plots in a grid
 
 grid.arrange(p1, p2, p3, p4, ncol = 2)
   
@@ -80,18 +87,18 @@ grid.arrange(p1, p2, p3, p4, ncol = 2)
   
   
 # Built Basic Machine Learning Model
-# split data 
+# Split data 
 set.seed(42)
 n <- nrow(df)
 id <- sample(1:n, size = 0.8*n, replace = FALSE)
 train_data <- df[id, ] 
 test_data <- df[-id, ]
 
-# train model logistic regression + K-Fold CV 
+# Logistic Regression with K-Fold CV 
 set.seed(42)
 ctrl <- trainControl(method = "cv",
                      number = 5)
-logit_model <- train(churn ~ tenure + monthlycharges + age,
+logit_model <- train(churn ~ .,
                      data = train_data,
                      method = "glm",
                      trControl = ctrl)
@@ -111,21 +118,22 @@ print(paste0("Logistic Regression Accuracy : ", accuracy_logit*100))
 
 ------------------------------------------------------------------------------
 
-# train model decision tree with K-Fold CV 
+# Train model decision tree with Repeated K-Fold CV 
 set.seed(42)
-ctrl <- trainControl(method = "cv",
+ctrl <- trainControl(method = "repeatedcv",
+                     repeats = 5,
                      number = 5,
                      verboseIter = TRUE)
-tree_model <- train(churn ~ tenure + monthlycharges + age,
+tree_model <- train(churn ~ .,
                      data = train_data,
                      method = "rpart",
                      trControl = ctrl)
 
-# test model 
+# Test model 
 
 p_tree <- predict(tree_model, newdata = test_data)
 
-# confusion matrix
+# Confusion matrix
 
 confusionMatrix(p_tree, test_data$churn, positive = "Yes",mode = "prec_recall")
 
@@ -135,22 +143,23 @@ print(paste0("Decision Tree Accuracy : ", accuracy_tree*100))
 
 ------------------------------------------------------------------------------
 
-# Random forest with K-Fold CV
+# Random forest with Repeated K-Fold CV
 
 set.seed(42)
-ctrl <- trainControl(method = "cv",
+ctrl <- trainControl(method = "repeatedcv",
+                     repeats = 5,
                      number = 5,
                      verboseIter = TRUE)
-rf_model <- train(churn ~ tenure + monthlycharges + age,
+rf_model <- train(churn ~ .,
                     data = train_data,
                     method = "rf",
                     trControl = ctrl)
 
-# test model 
+# Test model 
 
 p_rf <- predict(rf_model, newdata = test_data)
 
-# confusion matrix
+# Confusion matrix
 
 confusionMatrix(p_rf, test_data$churn, positive = "Yes",mode = "prec_recall")
 
@@ -161,12 +170,17 @@ print(paste0("Random Forest Accuracy : ", accuracy_rf*100))
 
 # Conclusion Accuracy
 
-cat("Logistic Regression Accuracy : ", accuracy_logit*100,
-    "\nDecision Tree Accurary : ", accuracy_tree*100,
-    "\nRandom Forest Accuracy : ", accuracy_rf*100)
+## Train Model Accuracy
 
+cat("Logistic Regression Train Model Accuracy : ",round(logit_model$results$Accuracy, 4)*100,
+    "\nDecision Tree Train Model Accurary : ", round(max(tree_model$results$Accuracy), 4)*100,
+    "\nRandom Forest Train Model Accuracy : ", round(max(rf_model$results$Accuracy), 4)*100)
 
+## Test Model Accuracy
 
+cat("Logistic Regression Test Model Accuracy : ", accuracy_logit*100,
+    "\nDecision Tree Test Model Accurary : ", accuracy_tree*100,
+    "\nRandom Forest Test Model Accuracy : ", accuracy_rf*100)
 
 
 
