@@ -22,3 +22,6 @@ fname = "John"
 lname = "Wick"
 
 ##Hello Guy 
+
+print("I am 27 year old")
+
