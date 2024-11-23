@@ -17,3 +17,6 @@ while i < 5:
 #add programming inout 
 first_name = input()
 last_name = input()
+# add customer
+fname = "John"
+lname = "Wick"
