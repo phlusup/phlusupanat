@@ -1,3 +1,3 @@
-# Hi, I am Phlu !
-Supanat Kritsana 
+# Hello, I am Phlu !
+Supanat Kritsana
 
