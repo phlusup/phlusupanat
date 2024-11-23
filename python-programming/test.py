@@ -14,3 +14,6 @@ i = 0
 while i < 5:
   print("Great Day")
   i += 1
+#add programming inout 
+first_name = input()
+last_name = input()
