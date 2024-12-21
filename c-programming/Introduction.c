@@ -13,3 +13,11 @@ int main()
 }
 */
 
+#include<stdio.h>
+int main()
+{
+    int a, h = 10, w = 5;
+    a = w*h;
+    printf("Area = %d\n", a);
+
+}
