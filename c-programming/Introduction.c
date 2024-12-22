@@ -94,3 +94,15 @@ int main()
     printf("Area = %.2f", a);
 }
 */
+
+/*
+#include<stdio.h>
+int main()
+{
+    int w, l, a;
+    printf("Enter width : height");
+    scanf("%d : %d", &w, &l);
+    a = w * l;
+    printf("Area = %d\n", a);
+}
+*/
