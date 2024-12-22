@@ -151,3 +151,14 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    float a = 100, b = 500, x;
+    x = ((a*2)+(b-5))/(2*a);
+    printf("%f\n", x);
+
+}
+
+*/
