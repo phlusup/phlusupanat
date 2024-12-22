@@ -45,8 +45,18 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
     printf("%4d %4o %4x %4X\n", 63, 63, 63, 63);
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    int score = 120;
+    char player[] = "Mary";
+    printf("%s has %d points.\n", player, score);
 }
