@@ -63,9 +63,22 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
     double x = 12.34;
     printf("%f %e %E %.1f\n", x, x, x, x);
 }
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    printf("%10s %5d %5.2f\n", "John", 8, 29.13);
+    printf("%10s %5d %5.2f\n", "Thomas", 150, 2.5);
+    printf("%10s %5d %5.2f\n", "Michael", 29, 155.158);
+}
+*/
+
