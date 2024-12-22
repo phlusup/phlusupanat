@@ -19,6 +19,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -26,4 +27,14 @@ int main()
     a = w*h;
     printf("Area = %d\n", a);
 
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    int a = 10;
+    float x = 4.629;
+    printf("a = %d\n", &a);
+    printf("x = %f\n", &x);
 }
