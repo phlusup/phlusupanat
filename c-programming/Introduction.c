@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+#include <studio.h>
+int main (
+    printf("Hello")
+)
+=======
 
 /*
 #include<stdio.h>
