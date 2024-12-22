@@ -141,3 +141,13 @@ int main()
 }
 */
 
+
+/*
+#include<stdio.h>
+int main()
+{
+    int x = (int) 4.62;
+    printf("%d\n", x);
+}
+*/
+
