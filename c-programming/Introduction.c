@@ -82,6 +82,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 # define PI 3.14159
 int main()
@@ -92,3 +93,4 @@ int main()
     a = PI * r *r;
     printf("Area = %.2f", a);
 }
+*/
