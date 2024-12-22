@@ -35,10 +35,18 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
     int a = 10;
     float x = 4.629;
     printf("a  = %d\nx = %.2f", a, x);
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    printf("%4d %4o %4x %4X\n", 63, 63, 63, 63);
 }
