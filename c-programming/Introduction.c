@@ -53,10 +53,19 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
     int score = 120;
     char player[] = "Mary";
     printf("%s has %d points.\n", player, score);
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    double x = 12.34;
+    printf("%f %e %E %.1f\n", x, x, x, x);
 }
