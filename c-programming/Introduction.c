@@ -413,3 +413,38 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int a, b, gcd, i;
+    printf("Enter two numbers : ");
+    scanf("%d %d", &a, &b);
+    i = 1;
+    while( i <= a && i <= b ){
+        if(a%i == 0 && b%i == 0)
+            gcd = i;
+        i++;
+    }
+    printf("GCD is %d\n", gcd);
+    return 0;
+} 
+*/
+
+#include<stdio.h>
+int main()
+{
+    int n, prime, i;
+    printf("Enter a numbers : ");
+    scanf("%d", &n);
+    prime = 1;
+    i = 2;
+    while(i<n){
+        if(n%i == 0)
+            prime = 0;
+        i++;
+    }
+    if(prime == 1) printf("%d is a prime number\n", n);
+    else printf("%d is not a prime number\n", n);
+    return 0;
+}
