@@ -206,3 +206,22 @@ int main()
     printf("%f\n %f\n",x1, x2);
 }
 */
+
+/*
+#include<stdio.h>
+#include<math.h>
+#define PI 3.1416
+int main()
+{
+    int rad;
+    float a, p;
+    printf("Input a radius of a circle: ");
+    scanf("%d", &rad);
+    a = PI * rad * rad;
+    p = 2 * PI * rad;
+    printf("The area of circle is %.2f and the perimeter of a circle is %.2f \n", a, p);
+
+    return 0;
+}
+*/
+
