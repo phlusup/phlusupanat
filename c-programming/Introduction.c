@@ -486,6 +486,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -493,7 +494,9 @@ int main()
     printf("How many stars do you want ? ");
     scanf("%d", &n);
     for ( i = 0; i < n; i++){
-        printf("*\n");
+        printf("*");
     }
     return 0;
 }
+*/
+
