@@ -371,3 +371,29 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int counter = 0;
+    while(++counter <= 10){
+        printf("%d %s", counter, "Hello\n");
+    }
+
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int counter = 1;
+    while(counter <= 3){
+        printf("%d\n", counter);
+        counter++;
+    }
+    printf("Finished, but why is the count  %d?\n", counter);
+}
+*/
+
+
