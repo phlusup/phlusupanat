@@ -396,4 +396,20 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int n; //specified numbers
+    printf("Enter your number : "); //Input number by users
+    scanf("%d", &n);
+    int i = 1;
+    while(i<=n){
+        if(i%5 == 0)
+            printf("%3d\n", i);
+        i++;
+    }
+    return 0;
+}
+*/
 
