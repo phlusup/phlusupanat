@@ -163,6 +163,7 @@ int main()
 
 */
 
+/*
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -189,3 +190,19 @@ int main()
     double j = log10(10);
     printf("%f\n", j);
 }
+*/
+
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c;
+    double x1, x2;
+    printf("Enter: ");
+    scanf("%f : %f : %f", &a, &b, &c);
+    x1 = -b + (sqrt(pow(b,2)-(4*a*c))/(2*a));
+    x2 = -b - (sqrt(pow(b,2)-(4*a*c))/(2*a));
+    printf("%f\n %f\n",x1, x2);
+}
+*/
