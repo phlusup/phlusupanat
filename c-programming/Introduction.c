@@ -346,3 +346,28 @@ int main()
 
 }
 */
+
+/*
+#include<stdio.h>
+int main()
+{
+    int counter = 1;
+    while (counter <= 10){
+        printf("%d\n", counter);
+        counter++;
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a = 1;
+    while(a<5){
+        printf("Hello\n");
+        a ++;
+    }
+}
+*/
+
