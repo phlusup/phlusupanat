@@ -164,10 +164,28 @@ int main()
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 #include<math.h>
 int main()
 {
-    int x, a = -2;
-    x = abs(a);
-    printf("%d", x);
+    int a = round(3.145);
+    printf("%d\n", a);
+    int b = abs(-1);
+    printf("%d\n", b);
+    double c = fabs(-3.5);
+    printf("%.2f\n", c);
+    int d = pow(2,3);
+    printf("%d\n", d);
+    double e = sin(3.1415);
+    printf("%f\n", e);
+    double f = cos(3.1415);
+    printf("%f\n", f);
+    double g = tan(3.1415);
+    printf("%f\n", g);
+    int h = sqrt(9);
+    printf("%d\n", h);
+    double i = log(10);
+    printf("%f\n", i);
+    double j = log10(10);
+    printf("%f\n", j);
 }
