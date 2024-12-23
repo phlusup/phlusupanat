@@ -500,3 +500,32 @@ int main()
 }
 */
 
+
+/*
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("How many stars do you want ? : ");
+    scanf("%d", &n);
+    for(;n>=1;n--)
+        printf("*");
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int sum = 0;
+    int number;
+
+    for(number = 2; number <= 10; number += 2){
+        sum += number;
+    }
+    printf("Sum is %d\n", sum);
+
+}
+*/
