@@ -262,3 +262,48 @@ int main()
     printf("%5d\n", x);
 }
 */
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter your number : ");
+    scanf("%d", &a);
+    if (a==0) b = 3;
+    printf("%d\n", b);
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter your number : ");
+    scanf("%d", &a);
+    if (a==0) b = 3; a = b;
+    printf("%d\n", a);
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter your number :");
+    scanf("%d", &a);
+    if (a==0)
+    {
+        b = 3;
+        a = b;
+        printf("Done\n");
+        printf("%d\n", a);
+    }
+    else {
+        printf("Fail\n");
+        printf("%d\n", a);
+    } 
+}
+*/
