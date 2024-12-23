@@ -431,6 +431,7 @@ int main()
 } 
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -446,5 +447,53 @@ int main()
     }
     if(prime == 1) printf("%d is a prime number\n", n);
     else printf("%d is not a prime number\n", n);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int i;
+    for( i = 0; i < 10; i++){
+        printf("%d %s\n", i, "Hello");
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int i = 0;
+    while(i<10){
+        printf("%d %s\n", i, "Hello");
+        i++;
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int count;
+    for (count  = 1; count <= 3; count++){
+        printf("%d\n", count);
+    }
+    printf("Finished, but why is the count %d?\n", count);
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    int n, i;
+    printf("How many stars do you want ? ");
+    scanf("%d", &n);
+    for ( i = 0; i < n; i++){
+        printf("*\n");
+    }
     return 0;
 }
