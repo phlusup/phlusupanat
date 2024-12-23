@@ -529,3 +529,24 @@ int main()
 
 }
 */
+
+
+/*
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double amount;
+    double pricipal = 1000;
+    double interest = 0.05; // 5%
+    unsigned int year;
+    printf("%4s %21s\n", "year", "Amount of deposit");
+    for(year = 1; year <= 10; ++year){
+        amount = pricipal * pow(1.0 + interest, year);
+        printf("%4u %21.2f\n", year, amount);
+    }
+    return 0;
+    
+}
+*/
