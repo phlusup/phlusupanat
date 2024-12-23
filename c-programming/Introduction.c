@@ -307,3 +307,42 @@ int main()
     } 
 }
 */
+
+/*
+#include<stdio.h>
+int main()
+{
+    int grade;
+    printf("Enter your grade(0-4) : ");
+    scanf("%d", &grade);
+    printf("You get ");
+    switch(grade)
+    {
+        case 4: printf("A\n"); break;
+        case 3: printf("B\n"); break;
+        case 2: printf("C\n"); break;
+        case 1: printf("D\n"); break;
+        case 0: printf("F\n"); break;
+        default:
+            printf("No grades\n");
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int grade;
+    printf("Enter your grade(0-4) : ");
+    scanf("%d", &grade);
+    if(grade == 4) printf("You get A\n"); 
+    else if(grade == 3) printf("You get B\n"); 
+    else if(grade == 2) printf("You get C\n"); 
+    else if(grade == 1) printf("You get D\n"); 
+    else if(grade == 0) printf("You get F\n"); 
+    else printf("You get No grade\n");
+
+
+}
+*/
