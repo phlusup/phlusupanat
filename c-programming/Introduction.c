@@ -225,3 +225,28 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int x;
+    printf("Enter you number : ");
+    scanf("%d", &x);
+    if (x>0) printf("SO BIG\n");
+    printf("%6d\n", x);
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter your number : ");
+    scanf("%d", &a);
+    if ( a >= 5 ) b = 3;
+    else b = 4;
+    printf("%d\n", b);
+}
+*/
+
