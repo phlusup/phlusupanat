@@ -628,6 +628,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -639,3 +640,19 @@ int main()
         printf("%2d", i);
     }
 }
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for( i = 0; i < 10; i++){
+        printf("%3d\n", i);
+        for( j = 10; j >= 1; j--){
+            printf("%3d", j);
+        }
+    printf("\n");
+    }   
+}
+*/
