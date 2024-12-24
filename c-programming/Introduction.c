@@ -721,3 +721,17 @@ int main()
     }
 }
 */
+
+#include<stdio.h>
+int main()
+{
+    int i,j,g;
+    printf("Enter your number : ");
+    scanf("%d", &g);
+    for(i=1; i <= g; i++){
+        for(j=1; j <= i ; j++){
+            printf("*");
+        }
+    printf("\n");
+    }
+}
