@@ -835,7 +835,7 @@ int main()
 #include<stdio.h>
 int main()
 {
-    int r, c, i, j, n;
+    int r, c, i, j;
     int matrix_A[10][10], matrix_B[10][10], matrix_C[10][10];
     printf("Number of rows = ");
     scanf("%d", &r);
@@ -853,6 +853,12 @@ int main()
         for(j=0; j<c; j++){
             printf("b(%d)(%d) = ", i, j);
             scanf("%d", &matrix_B[i][j]);
+        }
+    printf("--------------------------------------\n");
+    printf("Matrix A+B: \n");
+    for(i=0; i<r; i++)
+        for(j=0; j<c; j++){
+            printf("b(%d)(%d) = %d\n", i, j, matrix_A[i][j] + matrix_B[i][j]);
         }
     printf("--------------------------------------\n");
             
