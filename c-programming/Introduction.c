@@ -803,3 +803,59 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int two_dim[3][3];
+    int i, j, c = 1;
+    for(i=0; i < 3; i++)
+        for(j=0; j < 3; j++)
+            two_dim[i][j] = c++;
+}
+*/
+
+/*
+#include<stdio.h>
+#define ROW 3
+#define COLUMN 4
+int main()
+{
+    int i,j;
+    int matrix[ROW][COLUMN] = {{0,1,2,3},
+                               {1,3,5,7},
+                               {2,4,6,8}};
+    for(i=0; i<ROW; i++)
+        for(j=0; j<COLUMN; j++)
+            printf("matrix[%d][%d] = %d\n", i, j, matrix[i][j]);
+    return 0;
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    int r, c, i, j, n;
+    int matrix_A[10][10], matrix_B[10][10], matrix_C[10][10];
+    printf("Number of rows = ");
+    scanf("%d", &r);
+    printf("Number of columns = ");
+    scanf("%d", &c);
+    printf("Matrix A: \n");
+    for(i=0; i<r; i++)
+        for(j=0; j<c; j++){
+            printf("a(%d)(%d) = ", i, j);
+            scanf("%d", &matrix_A[i][j]);
+        }
+    printf("--------------------------------------\n");
+    printf("Matrix B: \n");
+    for(i=0; i<r; i++)
+        for(j=0; j<c; j++){
+            printf("b(%d)(%d) = ", i, j);
+            scanf("%d", &matrix_B[i][j]);
+        }
+    printf("--------------------------------------\n");
+            
+            
+
+}
