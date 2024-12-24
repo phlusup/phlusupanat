@@ -722,6 +722,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -735,3 +736,70 @@ int main()
     printf("\n");
     }
 }
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int n,count,factorial;
+    printf("Enter a positive integer : ");
+    scanf("%d", &n);
+    printf("%7s%10s\n", "Integer", "Factorial");
+    for(; n >= 1; n--){
+        printf("%7d", n);
+        factorial = 1;
+        for(count = 1; count <= n; count++)
+            factorial *= count;
+        printf("%7d\n", factorial);
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+#define SIZE 9
+int main()
+{
+    int i;
+    int fibo[SIZE] = {1,1,2,3,5,8,13,21,34};
+    printf("%s %15s \n", "Element", "Data");
+    for(i=0; i<SIZE; i++)
+        printf("fibo[%2d] %14d \n", i, fibo[i]);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n, i;
+    int num[10];
+    int min, max;
+    float avg;
+    printf("Number : ");
+    scanf("%d", &n);
+    for(i=0; i < n; i++){
+        printf("Data %d : ", i+1);
+        scanf("%d", &num[i]);
+    
+    }
+    avg = 0.0;
+    min = num[0];
+    max = num[0];
+    for (i = 0; i < n; i++){
+        avg = avg + num[i];
+        if (num[i] < min) min = num[i];
+        if (num[i] > max) max = num[i];
+
+    }
+    avg = avg / n;
+    printf("Average = %.2f \n", avg);
+    printf("Minimum = %d \n", min);
+    printf("Maximum = %d \n", max);
+
+    return 0;
+}
+*/
+
