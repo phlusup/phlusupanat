@@ -550,3 +550,42 @@ int main()
     
 }
 */
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a = 5;
+    do{
+        printf("Hello\n");
+        a++;
+    }while(a<5);
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a = 5;
+    while(a<5){
+        printf("Hello\n");
+        a++;
+    }
+}
+*/
+
+/*
+
+#include<stdio.h>
+int main()
+{
+    char c;
+    do {
+        printf("Do you want to continue ? ");
+        scanf("%c", &c);
+        while(getchar()!='\n');
+    }while(c == 'Y' || c == 'y');
+}
+*/
+
