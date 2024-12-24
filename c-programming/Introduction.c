@@ -657,6 +657,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -670,3 +671,36 @@ int main()
     }
     printf("\n");
 }
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int a = 0;
+    while(a < 6){
+        printf("******");
+        printf("\n");
+        a++;
+    }
+    printf("\n");
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int b = 0;
+    while(b<6){
+        int a = 0;
+        while(a<6){
+            printf("*");
+            a++;
+        }
+    printf("\n");
+    b++;
+    }
+}
+*/
+
