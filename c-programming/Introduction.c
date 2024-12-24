@@ -704,3 +704,20 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int b,a,w,h;
+    printf("Input wigth : ");
+    scanf("%d", &w);
+    printf("Input height : ");
+    scanf("%d", &h);
+    for( b = 0; b < h; b++ ){
+        for( a = 0; a < w; a ++){
+            printf("*");
+        }
+    printf("\n");
+    }
+}
+*/
