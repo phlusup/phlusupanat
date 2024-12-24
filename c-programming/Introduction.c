@@ -656,3 +656,17 @@ int main()
     }   
 }
 */
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=0; i < 6; i++){
+        printf("*");
+        for(j=6; j>1; j--){
+            printf("*");
+        }
+    printf("\n");
+    }
+    printf("\n");
+}
