@@ -589,3 +589,53 @@ int main()
 }
 */
 
+/*
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    for( x = 1; x <= 10; x++){
+        if( x == 5) break;
+        printf("%d\n", x);
+    }
+}
+*/
+/*
+#include<stdio.h>
+int main()
+{
+    int x;
+    for( x = 1; x <= 10; x++){
+        if( x == 5 ) continue;
+        printf("%d\n", x);
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main()
+{
+    int rad;
+    do{
+        printf("Enter radius : ");
+        scanf("%d", &rad);
+        if(rad <= 0) break;
+        printf("The area of the circle is %.2f\n", 3.14 * rad * rad);
+    }while( rad > 0);
+    printf("Non-positive valued is entered.. loop terminated\n");
+}
+*/
+
+#include<stdio.h>
+int main()
+{
+    int i;
+    for(i=0; i < 10; i++){
+        printf("%2d", i);
+    }
+    for(i = 10; i > 0; i--){
+        printf("%2d", i);
+    }
+}
