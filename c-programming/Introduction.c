@@ -832,6 +832,7 @@ int main()
 }
 */
 
+/*
 #include<stdio.h>
 int main()
 {
@@ -858,10 +859,26 @@ int main()
     printf("Matrix A+B: \n");
     for(i=0; i<r; i++)
         for(j=0; j<c; j++){
-            printf("b(%d)(%d) = %d\n", i, j, matrix_A[i][j] + matrix_B[i][j]);
+            matrix_C[i][j] = matrix_A[i][j] + matrix_B[i][j];
+            printf("b(%d)(%d) = %d\n", i, j, matrix_C[i][j]);
         }
     printf("--------------------------------------\n");
-            
-            
+    
+    for(i=0; i<r; i++){
+        for(j=0; j<c; j++) printf("%d  ", matrix_A[i][j]);
+        if(i == r/2) printf("+  "); else printf("   ");
+        for(j=0; j<c; j++) printf("%d  ", matrix_B[i][j]);
+        if(i == r/2) printf("=  "); else printf("   ");
+        for(j=0; j<c; j++) printf("%d  ", matrix_C[i][j]);
+        printf("\n");
+    }
+    printf("--------------------------------------\n");
+    return 0;
 
 }
+*/
+
+
+
+
+
