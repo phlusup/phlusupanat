@@ -64,3 +64,28 @@ int main()
 }
 */
 
+/*
+
+#include<stdio.h>
+int main()
+{
+    int age; //integer
+    int Age;
+    double price; //real number
+    age = 28;
+    Age = 99; // case sensitive
+    price = 899.75;
+    int score = 70;
+    price = price * 1.1;
+    printf("%d\n", age);
+    printf("%d\n", Age);
+    printf("%f\n", price);
+    printf("%.2f\n", price);
+    printf("%d\n", score);
+    char *hero = "spiderman";
+    printf("%s\n", hero);
+    char country[] = "Thailand";
+    printf("%s\n", country);
+}
+*/
+
