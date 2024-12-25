@@ -878,7 +878,41 @@ int main()
 }
 */
 
-
+/*
+#include<stdio.h>
+int main()
+{
+    int r1, c1, r2, c2, i, j, k;
+    int a[15][15], b[15][15], c[15][15] = {0};
+    printf("Size of A (R1,C1) : ");
+    scanf("%d,%d", &r1,&c1);
+    printf("Matrix A: \n");
+    for(i=0; i<r1; i++)
+        for(j=0; j<c1; j++){
+            printf("a(%d,%d) = ",i, j);
+            scanf("%d", &a[i][j]);
+        }
+    printf("--------------------------------------\n");
+    printf("Size of B (R2,C2) : ");
+    scanf("%d,%d", &r2,&c2);
+    printf("Matrix B: \n");
+    for(i=0; i<r2; i++)
+        for(j=0; j<c2; j++){
+            printf("b(%d,%d) = ",i, j);
+            scanf("%d", &b[i][j]);
+        }
+    printf("--------------------------------------\n");
+    printf("Matrix A*B: \n");
+    for(i=0; i<r1; i++)
+        for(j=0; j<c2; j++){
+            for(k=0; k<c1; k++)
+            c[i][j] += a[i][k] * b[k][j];
+            printf("a*b(%d,%d) =  %d \n",i, j, c[i][j]);
+        }
+    printf("--------------------------------------\n");
+    return 0;
+}
+*/
 
 
 
