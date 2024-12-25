@@ -45,3 +45,22 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+int main()
+{
+    int b, h;
+    double area;
+    printf("Enter base = ");
+    scanf("%d", &b);
+    printf("Enter height = ");
+    scanf("%d", &h);
+    area = .5 * b * h;
+    printf("1/2 = %d\n", 1/2);
+    printf("9/2 = %d\n", 9/2);
+    printf("1.0/2 = %f\n", 1.0/2);
+    printf("1/2.0 = %f\n", 1/2.0);
+    printf("Triangle area = %f\n", area);
+}
+*/
+
