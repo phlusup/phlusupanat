@@ -160,3 +160,18 @@ int main() {
 
 }
 */
+
+/*
+#include<stdio.h>
+void seq() {
+    double celsius, fahrenheit;
+    printf("Enter degree in Celsius = ");
+    scanf("%lf", &celsius);
+    fahrenheit = (1.8 * celsius) + 32;
+    printf("%f Celsius = %f Fahrenheit\n", celsius, fahrenheit);
+}
+int main() {
+    seq();
+}
+*/
+
