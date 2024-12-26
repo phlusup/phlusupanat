@@ -196,3 +196,77 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+void repetition() {
+    int sum = 0;
+    int i;
+    for(i = 1; i <= 100; i += 2){
+        printf("%d\n", i);
+        sum = sum + i;
+    }
+    printf("%d\n", sum);
+}
+int main() {
+    repetition();
+}
+*/
+
+/*
+#include<stdio.h>
+//function
+int rectangle(int w, int h) {
+    int area;
+    area = w * h;
+    return area;
+}
+// subroutine, procedure
+void box(int w, int h) {
+    int i,j;
+    for(i=0;i<h; i++){
+        for(j=0; j<w; j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+int main(){
+    int w,h,area;
+    printf("Enter width = ");
+    scanf("%d", &w);
+    printf("Enter height = ");
+    scanf("%d", &h);
+    area = rectangle(w,h);
+    printf("Rectangle area = %d\n", rectangle(w,h));
+    printf("Rectangle area = %d\n", rectangle(7,4));
+    printf("Rectangle area = %d\n", area);
+    box(w,h);
+}
+*/
+
+
+#include<stdio.h>
+void demo_int(){
+    int n = 84, m = 43;
+    printf("n = %d\nm = |%5d|\n", n, m);
+    printf("n = %d\nm = |%05d|\n", n, m);
+}
+void demo_float(){
+    double n = 3.14159;
+    printf("%f\n", n);
+    printf("%.2f\n", n);
+    printf("|%.3f|\n", n);
+    printf("|%10.3f|\n", n);
+}
+void demo_char(){
+    char c = 'Z';
+    printf("c = %c %d %x %X %#X %o\n", c, c, c, c, c, c);
+    int a = 90;
+    printf("a = %d %c\n", a, a);
+}
+int main() {
+//  demo_int();
+//  demo_float();
+    demo_char();
+    return 0;
+}
