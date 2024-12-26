@@ -175,3 +175,24 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+void condition() {
+    int age;
+    printf("Enter your age = ");
+    scanf("%d", &age);
+    if( age <= 6 ) {
+        printf("you are a kid.\n");
+        printf("Free of charge\n");
+    } else {
+        printf("you are an adult.\n");
+        printf("199 Bath.\n");
+    }
+    printf("bye............\n");
+}
+
+int main() {
+    condition();
+}
+*/
+
