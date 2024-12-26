@@ -89,3 +89,74 @@ int main()
 }
 */
 
+/*
+#include<stdio.h>
+void rectangle() {
+    double area;
+    int w, h;
+    printf("Enter width = ");
+    scanf("%d", &w);
+    printf("Enter height = ");
+    scanf("%d", &h);
+    area = w * h;
+    printf("rectangle area = %f\n", area);
+}
+void triangle(){
+    double area;
+    int w, h;
+    printf("Enter width = ");
+    scanf("%d", &w);
+    printf("Enter height = ");
+    scanf("%d", &h);
+    area = 0.5* w * h;
+    printf("triangle area = %f\n", area);
+}
+void circle(){
+    double area, r;
+    int w, h;
+    printf("Enter radius = ");
+    scanf("%lf", &r);
+    area = 3.14 * r * r;
+    printf("circle area = %f\n", area);
+}
+int main() {
+    triangle();
+}
+*/
+
+
+/*
+
+double rectangle2(double w, double h) {
+    double area;
+    area = w * h;
+    return area;
+}
+int main() {
+    double w, h;
+    printf("Enter width = ");
+    scanf("%lf", &w);
+    printf("Enter height = ");
+    scanf("%lf", &h);
+    printf("rectangle area = %f\n", rectangle2(w, h));
+}
+*/
+
+/*
+
+#include<stdio.h>
+double triangle2(double b, double h) {
+    double area;
+    area = 0.5 * b * h;
+    return area;
+}
+int main() {
+    double b, h;
+    printf("Enter base = ");
+    scanf("%lf", &b);
+    printf("Enter height = ");
+    scanf("%lf", &h);
+    printf("Triangle area = %f\n", triangle2(b,h));
+
+}
+*/
