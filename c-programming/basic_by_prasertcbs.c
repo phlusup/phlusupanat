@@ -739,18 +739,25 @@ int main() {
 }
 */
 
+
+// ROT-13
+/*
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
 
 int main() {
-    char s[] = "HELLO";
+    char s[] = "helloHELLO";
+    char upper;
     for(int i = 0; i < strlen(s); i++ ){
-        if(s[i] >= 'A' && s[i] <= 'M'){
+        upper = toupper(s[i]);
+        if(upper >= 'A' && upper <= 'M'){
              printf("%c\n", s[i] + 13);
         } else {
              printf("%c\n", s[i] - 13);
         }
     }
     return 0;
-
 }
+*/
+
