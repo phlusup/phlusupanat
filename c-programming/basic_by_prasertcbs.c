@@ -466,6 +466,7 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 void switch_demo(){
     char d;
@@ -503,4 +504,14 @@ void switch_demo(){
 }
 int main() {
     switch_demo();
+}
+*/
+
+#include<stdio.h>
+int main(){
+    int i;
+    for( i = 1; i <= 10; i++ ){
+        printf("%d\n", i);
+    }
+    printf("\n");
 }
