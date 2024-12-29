@@ -643,3 +643,44 @@ int main(){
     printf("year = %d\n", saving2(1000, .05, 2000));
 }
 */
+
+/*
+#include<stdio.h>
+int gcd(int a, int b) {
+    int cnt = 0;
+    int min = a < b ? a : b;
+    for(int i = min; i >= 1; i--){
+        cnt++;
+        if(a % i == 0 && b % i == 0){
+            printf("counter(simple) = %d\n", cnt);
+            return i;
+        }
+    }
+}
+
+int main() {
+    int a = 9, b = 21;
+    printf("gcd(%d, %d) = %d\n", a,b, gcd(a, b));
+}
+
+
+
+/*
+
+#include<stdio.h>
+#include<math.h>
+int gcdEuclid(int a, int b){
+    int t;
+    while(  b != 0 ) {
+        t = b;
+        b = a % b;
+        a = t;
+
+    }
+    return a;
+}
+int main(){
+    int a = 9, b = 21;
+    printf("gcd(%d, %d) = %d\n", a,b,gcdEuclid(a,b));
+}   
+*/
