@@ -304,6 +304,7 @@ int main(){
 // global vs. local variable
 // public vs. private variable
 
+/*
 #include<stdio.h>
 int v = 777; //global variable (public)
 void fn1() {
@@ -334,4 +335,22 @@ int main() {
     // fn3();
     fn4();
     return 0;
+}
+*/
+
+
+#include<stdio.h>
+int main()
+{
+    int h, age;
+    printf("Enter your height (cm) : ");
+    scanf("%d", &h);
+    printf("Enter your age (year) : ");
+    scanf("%d", &age);
+    if (h > 160 && age > 20 && age < 25) {
+        printf("You pass\n");
+        printf("Congratulations\n");
+    } else {
+        printf("Sorry\n");
+    }
 }
