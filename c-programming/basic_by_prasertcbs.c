@@ -435,3 +435,72 @@ int main(){
 }
 */
 
+
+// switch case 
+
+/*
+#include<stdio.h>
+void if_demo() {
+    char d;
+    printf("[m]ocha\n");
+    printf("[l]atte\n");
+    printf("[e]spresso\n");
+    printf("[c]appuccino\n");
+    printf("Please select a menu");
+    scanf(" %c", &d);
+    if ( d == 'm') {
+        printf("40\n");
+    } else if ( d == 'l') {
+        printf("30/n");
+    } else if ( d == 'e') {
+        printf("20/n");
+    } else if ( d == 'c') {
+        printf("50/n");    
+    } else {
+        printf("Please select a valid menu\n");
+    }
+}
+
+int main() {
+    if_demo();
+}
+*/
+
+#include<stdio.h>
+void switch_demo(){
+    char d;
+    printf("1. [m]ocha\n");
+    printf("2. [l]atte\n");
+    printf("3. [e]spresso\n");
+    printf("4. [c]appuccino\n");
+    printf("5. [a]mericano\n");
+    printf("Please select a menu : ");
+    scanf(" %c", &d);
+    switch (d) {
+        case 'm' :
+        case '1' :
+            printf("40\n");
+            break;
+        case 'l':
+        case '2' :
+            printf("30\n");
+            break;
+        case 'e':
+        case '3' :
+            printf("20\n");
+            break;
+        case 'c':
+        case '4' :
+            printf("50\n");
+            break;
+        case 'a':
+        case '5' :
+            printf("99\n");
+            break;
+        default:
+            printf("Please select a valid menu.\n");
+    }
+}
+int main() {
+    switch_demo();
+}
