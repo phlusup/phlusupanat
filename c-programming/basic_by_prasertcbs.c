@@ -568,12 +568,49 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 int main() {
     for( int i = 1; i <= 12 ; i++){
         for( int j = 9; j <= 11; j++){
-            printf("%2d x %2d = %3d ",j, i, i*j);
+            printf("%2d x %2d = %3d%5s",j, i, i*j, " ");
         }
         printf("\n");
     }
 }
+*/
+
+/*
+#include<stdio.h>
+void demo1() {
+    int sum = 0, n;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    while( n != 0){
+        sum += n;
+        printf("Enter a number : ");
+        scanf("%d", &n);
+    }
+    printf("sum = %d\n", sum);
+}
+void demo2() {
+    int sum = 0, n;
+    do {
+        printf("Enter a number : ");
+        scanf("%d", &n);
+        sum += sum + n;
+    } while (n != 0);
+    printf("sum = %d\n", sum);
+    
+
+}
+int main() {
+    int i = 1;
+    while(i<=10) {
+        printf("i = %d\n", i);
+        i++;
+    }
+    demo2();
+}
+*/
+
