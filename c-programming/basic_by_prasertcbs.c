@@ -716,6 +716,11 @@ void asciiTable() {
         printf("%d: %c\n",i, i );
     }
 }
+void az() {
+    for( char c = 'A'; c <= 'Z'; c++){
+        printf("%c",c);
+    }
+}
 void demo1() {
     char c1;
     c1 = 'A';
@@ -728,5 +733,6 @@ void demo1() {
 }
 
 int main() {
-    asciiTable();
+    //asciiTable();
+    az();
 }
