@@ -338,7 +338,7 @@ int main() {
 }
 */
 
-
+/*
 #include<stdio.h>
 int main()
 {
@@ -352,5 +352,29 @@ int main()
         printf("Congratulations\n");
     } else {
         printf("Sorry\n");
+    }
+}
+*/
+
+#include<stdio.h>
+int main() 
+{
+    char d;
+    printf("[m]ocha\n");
+    printf("[l]atte\n");
+    printf("[e]spresso\n");
+    printf("[c]appuccino\n");
+    printf("Please select menu: ");
+    scanf(" %c", &d);
+    if(d == 'm') {
+        printf("40\n");
+    } else if (d == 'l'){
+        printf("30\n");
+    } else if (d == 'e') {
+        printf("20\n");
+    } else if (d == 'c') {
+        printf("50\n");
+    } else {
+        printf("Please select a valid menu.\n");
     }
 }
