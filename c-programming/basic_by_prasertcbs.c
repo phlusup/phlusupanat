@@ -710,6 +710,7 @@ int main(){
 }
 */
 
+/*
 #include<stdio.h>
 void asciiTable() {
     for(int i = 0; i < 256; i++){
@@ -735,4 +736,21 @@ void demo1() {
 int main() {
     //asciiTable();
     az();
+}
+*/
+
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+    char s[] = "HELLO";
+    for(int i = 0; i < strlen(s); i++ ){
+        if(s[i] >= 'A' && s[i] <= 'M'){
+             printf("%c\n", s[i] + 13);
+        } else {
+             printf("%c\n", s[i] - 13);
+        }
+    }
+    return 0;
+
 }
