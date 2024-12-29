@@ -507,6 +507,7 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 int main(){
     int i;
@@ -515,3 +516,32 @@ int main(){
     }
     printf("\n");
 }
+*/
+
+
+/*
+
+
+#include<stdio.h>
+int main(){
+    double d;
+    for( d = 10; d > 0; d -= .5){
+        printf("d = %f\n", d);
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    int sum = 0;
+    // for complier for C99 
+    for(int i = 1; i <= 10; i++){
+        printf("%d\n", i);
+        sum  += i;
+        printf("sum = %d\n", i);
+
+    }
+}
+*/
+
