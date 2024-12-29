@@ -545,3 +545,13 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+int main() {
+    for(int i = 1; i <= 10; i++){
+        printf("%2d ounces = %8.4f grams\n", i, i*28.3465);
+
+    }
+
+}
+*/
