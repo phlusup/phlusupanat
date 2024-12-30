@@ -814,6 +814,7 @@ double circle(double r) {
 
 // Header file 
 
+/*
 #include <stdio.h>
 #include "area.c"
 #include "area.h"
@@ -828,3 +829,88 @@ int main() {
     printf("rectangle area = %.2f\n", rectangle(3,5));
     return 0;
 }
+*/
+
+// game
+
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+char playerShape() {
+    char shape;
+    printf("[r]ock, [p]aper, [s]cissors, [q]uit\n");
+    scanf("%c", &shape);
+    return shape;
+}
+
+char computerShape() {
+    int r;
+    r = rand() % 3;
+    char s[] = {'r', 'p', 's'};
+    return s[r];
+    printf("r = %d\n", r);
+}
+
+int main() {
+    srand(time(NULL));
+    //printf("%c\n", playerShape());
+    //printf("%c\n", computerShape());
+    char player, computer;
+    player = playerShape();
+    computer = computerShape();
+    printf("player -> %c\ncomputer -> %c\n", player, computer);
+    if (player == computer ){
+        printf("tie.\n");
+    } else {
+        if (player == 'r' && computer == 's') {
+            printf("you won.\n");
+        } else if ( player == 'p' && computer == 'r'){
+            printf("you won.\n");
+        } else if (player == 's' && computer == 'p'){
+            printf("you won.\n");
+        } else {
+                printf("you lose.\n");
+        }
+
+    }
+}
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+char playerShape() {
+    char shape;
+    printf("[r]ock, [p]aper, [s]cissors, [q]uit\n");
+    scanf("%c", &shape);
+    return shape;
+}
+
+char computerShape() {
+    char s[] = {'r', 'p', 's'};
+    return s[rand() % 3];
+}
+
+int main() {
+    srand(time(NULL));
+    char player, computer;
+    player = playerShape();
+    while (player != 'q') {
+        computer = computerShape();
+        printf("player -> %c, computer -> %c: ", player, computer);
+        if (player == computer ){
+            printf("tie.\n");
+        } else {
+            if ( (player == 'r' && computer == 's')  || 
+                ( player == 'p' && computer == 'r') || 
+                (player == 's' && computer == 'p')) {
+                printf("you won.\n");
+            } else {
+                    printf("you lose.\n");
+            }
+        }
+    } 
+}
+
