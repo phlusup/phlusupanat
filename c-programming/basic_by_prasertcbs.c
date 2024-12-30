@@ -878,6 +878,8 @@ int main() {
 }
 */
 
+
+/*
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -915,4 +917,36 @@ int main() {
         player = playerShape();
     } 
 }
+*/
+
+// static variable 
+
+/*
+#include<stdio.h>
+#include<math.h>
+
+void demo() {
+    int n = 1;
+    static int sv = 1;
+    printf(" n = %d, sv = %d\n", n , sv);
+    n++;
+    sv++;
+}
+void move(int x, int y){
+    static int prevX = 0;
+    static int prevY = 0;
+    double distance = sqrt(pow(prevX - x, 2) + pow(prevY - y, 2));
+    printf("distance((%d,%d), (%d,%d)) = %.2f\n", prevX, prevY, x, y, distance);
+    prevX = x;
+    prevY = y;
+}
+
+int main() {
+    for( int i = 0; i < 5; i++) {
+        //demo();
+        move(i+5, i*2);
+    }
+    return 0;
+}
+*/
 
