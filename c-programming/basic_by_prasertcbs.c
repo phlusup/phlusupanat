@@ -789,3 +789,26 @@ int main() {
 }
 */
 
+/*
+
+//function declaration and function definition 
+
+#include<stdio.h>
+
+//function declaration 
+double circle(double r);
+double rectangle(double w, double h) {
+    return w * h;
+}
+int main() {
+    printf("rectangle area = %.2f\n", rectangle(3,5));
+    printf("circle area = %.2f\n", circle(5));
+    return 0;
+}
+//function definition
+double circle(double r) {
+    return 3.14 * r * r;
+}
+*/
+
+
