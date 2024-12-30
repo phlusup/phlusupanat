@@ -950,6 +950,8 @@ int main() {
 }
 */
 
+
+/*
 #include<stdio.h>
 #include<math.h>
 struct Coord {
@@ -957,6 +959,7 @@ struct Coord {
     double y;
 };
 
+// define type by yourself
 typedef struct {
     double x, y;
 } Coordinate;
@@ -995,3 +998,4 @@ int main() {
 
     return 0;
 }
+*/
