@@ -812,3 +812,18 @@ double circle(double r) {
 */
 
 
+// Header file 
+
+#include <stdio.h>
+#include "area.h"
+
+// double circle(double r);
+// double triangle(double b, double h);
+// double rectangle(double w, double h);
+
+int main() {
+    printf("circle area = %.2f\n", circle(5));
+    printf("triangle area = %.2f\n", rectangle(3,5));
+    printf("rectangle area = %.2f\n", rectangle(3,5));
+    return 0;
+}
