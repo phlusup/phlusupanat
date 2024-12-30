@@ -881,11 +881,12 @@ int main() {
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<ctype.h>
 char playerShape() {
     char shape;
-    printf("[r]ock, [p]aper, [s]cissors, [q]uit\n");
-    scanf("%c", &shape);
-    return shape;
+    printf("[r]ock, [p]aper, [s]cissors, [q]uit : ");
+    scanf(" %c", &shape);
+    return tolower(shape);
 }
 
 char computerShape() {
@@ -908,9 +909,10 @@ int main() {
                 (player == 's' && computer == 'p')) {
                 printf("you won.\n");
             } else {
-                    printf("you lose.\n");
+                printf("you lose.\n");
             }
         }
+        player = playerShape();
     } 
 }
 
