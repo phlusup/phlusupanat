@@ -815,6 +815,7 @@ double circle(double r) {
 // Header file 
 
 #include <stdio.h>
+#include "area.c"
 #include "area.h"
 
 // double circle(double r);
