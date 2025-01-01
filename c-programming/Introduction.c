@@ -995,7 +995,6 @@ int main() {
 }
 */
 
-/*
 #include<stdio.h>
 int main() {
     char word[10];
@@ -1004,5 +1003,3 @@ int main() {
     printf("Hello %s\n", word);
     return 0;
 }
-*/
-
