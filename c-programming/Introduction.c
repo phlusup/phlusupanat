@@ -913,6 +913,96 @@ int main()
     return 0;
 }
 */
+/*
+#include<stdio.h>
+int main() {
+    char x = 'A';
+    int y = 65;
+
+    printf("x = %c, %d\n", x, x);
+    printf("x = %c, %d\n", x, x);
+
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    char x = 'M';
+    char y[] = "Mahidol";
+    printf("%c\n", x);
+    printf("%s\n", y);
+}
+*/
 
 
+/*
+
+#include<stdio.h>
+int main() {
+    char x[10] = "Apple";
+    int i = 0;
+    while (x[i] != NULL){
+        printf("%c", x[i]);
+        i++;
+    }
+    return 0;
+}
+*/
+
+/*
+
+#include<stdio.h>
+int main() { 
+    char word[] = "Hello";
+    printf("%s\n", word);
+    printf("%c\n", word[0]);
+
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    printf("Enter youy char : ");
+    char c = getc(stdin);
+    //getchar();
+    printf("%c\n", c);
+    
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    printf("Enter youy char : ");
+    char c = getchar();
+    //getchar();
+    printf("%c\n", c);
+    
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    char word[10];
+    printf("Enter your name : ");
+    scanf("%s", word);
+    printf("Hello %s\n", word);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+    char word[10];
+    printf("Enter your name : ");
+    gets(word);
+    printf("Hello %s\n", word);
+    return 0;
+}
+*/
 
