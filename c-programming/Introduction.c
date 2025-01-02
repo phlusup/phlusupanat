@@ -1007,4 +1007,24 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+int main() {
+    char ch;
+    printf("Enter : ");
+    ch = getc(stdin);
+    printf("%c\n", ch);
+    return 0;
+}
+*/
 
+/*
+#include<stdio.h>
+int main() {
+    char ch;
+    printf("Enter : ");
+    ch = getchar();
+    printf("%c\n", ch);
+    return 0;
+}
+*/
