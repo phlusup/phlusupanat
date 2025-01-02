@@ -1028,3 +1028,24 @@ int main() {
     return 0;
 }
 */
+
+/*
+#include<stdio.h>
+int main() { 
+    char ch = 'M';
+    printf("Put char into screen : ");
+    putc(ch, stdout);
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+int main() { 
+    char ch = 'M';
+    printf("Put char into screen : ");
+    putchar(ch);
+    return 0;
+}
+*/
+
+
