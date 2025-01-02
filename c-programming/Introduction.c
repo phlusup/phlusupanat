@@ -1048,4 +1048,43 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+int main() {
+    char word[10] = "Mahidol";
+    printf("%s\n", word);
+    puts(word);
+    printf("End of Program. \n");
+}
+*/
+
+
+//ตัวอย่างการใช้งานอาเรย์ 2 มิติ กับ สตริง
+/*
+#include<stdio.h>
+int main() {
+    char name[3][20] = {"Scoland", "England", "Wales"};
+    int i;
+    for( i = 0; i < 3; i++){
+        printf("%s\n", name[i]);
+    }
+}
+*/
+
+//การรับและแสดงผลสตริงในตัวแปรอาเรย์ 2 มิติ
+/*
+#include<stdio.h>
+int main() {
+    char fruit[3][20];
+    int i;
+    for(  i = 0; i < 3; i++){
+        printf("Enter fruit : ");
+        scanf("%s", fruit[i]);
+    }
+    for ( i = 0; i < 3; i++){
+        printf("%s ", fruit[i]);
+    }
+    printf("\n");
+}
+*/
 
