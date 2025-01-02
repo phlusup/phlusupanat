@@ -1126,3 +1126,63 @@ int main() {
     return 0;
 }
 */
+
+
+/*
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str1[5] = "abcd";
+    char str2[5] = "abCD";
+    char str3[5] = "abcd";
+    int result;
+    result = strcmp(str1, str3);
+
+    if(result == 0){
+        printf("Yes, it' the same word.\n");
+    } else {
+        printf("No, it's not the same word.\n");
+    }
+    
+    return 0;
+}
+*/
+
+/*
+
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str1[5] = "bbbb";
+    char str2[5] = "aaaa";
+    char str3[5] = "cccc";
+
+    int result;
+    result = strcmp(str1, str2);
+    printf("strcmp(str1, str2) = %d\n", result);
+
+    result = strcmp(str1, str3);
+    printf("strcmp(str1, str3) = %d\n", result);
+    
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+    char str1[10], str2[10];
+    int x;
+    strcpy(str1, "Cat");
+    strcpy(str2, "Dog");
+
+    if(strlen(str1) == strlen(str2)) {
+        strcat(str1, str2);
+    } else {
+        strcat(str2, str1);
+    }
+    printf("%s %s\n", str1, str2);
+}
+*/
