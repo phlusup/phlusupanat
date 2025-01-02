@@ -1088,3 +1088,41 @@ int main() {
 }
 */
 
+/*
+
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str1[10];
+    char str2[10] = "Apple";
+    strcpy(str1, "Banana");
+    puts(str1);
+    strcpy(str1, str2);
+    puts(str1);
+}
+*/
+
+/*
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str1[20] = "Mahidol ";
+    char str2[20] = "University";
+    strcat(str1, str2);
+    puts(str1);
+    puts(str2);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char country[10] = "England";
+    printf("%ld\n", strlen(country));
+    strcpy(country, "Thailand");
+    printf("%ld\n", strlen(country));
+    return 0;
+}
+*/
