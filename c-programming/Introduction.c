@@ -1186,3 +1186,44 @@ int main() {
     printf("%s %s\n", str1, str2);
 }
 */
+
+
+/*
+#include<stdio.h>
+int main(){
+    int x = 10;
+    int *p;
+    p = &x;
+
+    printf("x = %d \n", x);
+    printf("p = %p \n", p);
+    printf("*p = %d \n", *p);
+}
+*/
+
+
+/*
+#include<stdio.h>
+int main() {
+    int x = 4;
+    int *p;
+    printf("x = %d \n", x);
+
+    p = &x;
+    *p = 5;
+    printf("x = %d \n", x);
+}
+*/
+
+/*
+
+#include<stdio.h>
+int main() {
+    int x = 4;
+    int *p;
+    p = &x;
+    printf("Enter number : ");
+    scanf("%d", &x);
+    printf("x = %d\n", *p);
+}
+*/
