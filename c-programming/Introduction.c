@@ -1316,3 +1316,90 @@ int main() {
     
 }
 */
+
+/*
+#include<stdio.h>
+int main(){
+    char word[] = "SuperCat";
+    char *p;
+    p = &word[0];
+    printf("Word = %s \n", p);
+    printf("Character = %c \n", *p);
+}
+*/
+
+
+/*
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char *ptr = "CatHero";
+    printf("Word = %s\n", ptr);
+    printf("Char = %c\n", *ptr);
+    printf("Char = %c\n", ptr[3]);
+    printf("Size of word  = %lu\n", strlen(ptr));
+}
+*/
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main() {
+    char w[] = "Cat";
+    int x = 8;
+    double y= 3.1;
+    char z = 'M';
+    printf("Sizeof w = %lu \n", sizeof(w));
+    printf("Sizeof x = %lu \n", sizeof(x));
+    printf("Sizeof y = %lu \n", sizeof(y));
+    printf("Sizeof z = %lu \n", sizeof(z));
+
+    return 0;
+}
+*/
+
+/*
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main() {
+    char *str;
+    str = (char * ) malloc(10);
+    strcpy(str, "SuperCat");
+    printf("String = %s\n", str);
+    printf("Sizeof string = %lu\n", strlen(str));
+    free(str);
+
+    int *ptr, i;
+    ptr = (int * ) malloc(10*(sizeof(int)));
+    for(i = 0; i < 10; i++){
+        ptr[i] = 2*i+1;
+    }
+    for(i = 0; i < 10; i++){
+        printf("Interger[%d] = %d\n", i, ptr[i]);
+    }
+    free(ptr);
+}
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main() {
+    int num, i;
+    float *score, sum;
+    printf("Number of student : ");
+    scanf("%d", &num);
+
+    score = ( float * ) malloc(num*sizeof(float));
+    sum = 0.0;
+    for(i = 0; i < num; i++){
+        printf("Student %d = ", i+1);
+        scanf("%f", score+i);
+        sum += *(score+i);
+    }
+    printf("Average score of %d Students =  %.1f\n", num, sum/num);
+    free(score);
+}
