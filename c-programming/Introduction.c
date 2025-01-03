@@ -1227,3 +1227,92 @@ int main() {
     printf("x = %d\n", *p);
 }
 */
+
+/*
+#include<stdio.h>
+int main(){
+    char str[] = "cat in space";
+    char *cp;
+
+    cp = str;
+    printf("*cp = %c\n", *cp);
+    cp += 2;
+    printf("*cp = %c\n", *cp);
+
+
+}
+*/
+
+
+
+/*
+#include<stdio.h>
+int main() {
+    int a[] = {31415, 21828};
+    int *ip;
+
+    ip = a;
+    printf("*ip = %d\n", *ip);
+    ip++;
+    printf("*ip = %d\n", *ip);
+}
+*/
+
+
+/*
+#include<stdio.h>
+int main() {
+    int x[5] = {0,2,4,6,8};
+    int *p1, *p2, *p3;
+
+    p1 = &x[0];
+    printf("*p1 = %d \n", *p1);
+
+    p2 = x;
+    printf("*p2 = %d \n", *p2);
+
+    p3 = &x[3];
+    printf("*p3 = %d \n", *p3);
+
+    p1++;
+    printf("*p1 = %d \n", *p1);
+
+    p1 += 2;
+    printf("*p1 = %d \n", *p1);
+
+}
+*/
+
+/*
+#include<stdio.h>
+#define SIZE 10
+int main() {
+    int a[SIZE] = {1,2,3,4,5,6,7,8,9,10};
+    int *pa, *pb, i, temp;
+    pa = &a[0];
+    printf("Original : ");
+    for(i = 0; i < SIZE; i++){
+        printf("%d ", *pa);
+        pa++;
+    }
+    printf("\n");
+
+    pa = &a[0];
+    pb = &a[SIZE-1];
+    for(i = 0; i < SIZE/2; i++){
+        temp = *pa;
+        *pa = *pb;
+        *pb = temp;
+        pa++;
+        pb--;
+    }
+    pa = &a[0];
+    printf("Reverse : ");
+    for(i = 0; i < SIZE; i++){
+        printf("%d ", *pa);
+        pa++;
+    }
+    printf("\n");
+    
+}
+*/
