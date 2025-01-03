@@ -1384,6 +1384,7 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -1403,3 +1404,91 @@ int main() {
     printf("Average score of %d Students =  %.1f\n", num, sum/num);
     free(score);
 }
+*/
+
+/*
+#include <stdio.h>
+
+struct course {
+    char code[8], name[20], teacher[20];
+    int capacity, registered;
+    double average_grade;
+};
+int main() {
+
+    return 0;
+}
+*/
+
+
+/*
+#include<stdio.h>
+struct student {
+    char name[20];
+    long id;
+    double gpa;
+    char advisor[20];
+    char guardian[20];
+};
+
+union student_union {
+    char name[20];
+    long id;
+    double gpa;
+    char advisor[20];
+    char guardian[20];
+};
+
+int main() {
+    struct student st;
+    union student_union st2;
+    printf("size of struct = %ld\n", sizeof(st));
+    printf("size of union = %ld\n", sizeof(st2));
+
+
+    return 0;
+    
+}
+*/
+
+/*
+#include<stdio.h>
+struct student {
+    char name[20];
+    long id;
+    double gpa;
+};
+int main() {
+    struct student s;
+    typedef struct student std;
+    std s2;
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+typedef struct student {
+    char name[20];
+    long id;
+    double gpa;
+}std;
+int main() {
+    struct student s;
+    std s2;
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+typedef struct {
+    char name[20];
+    long id;
+    double gpa;
+}std;
+int main() {
+    std s2;
+    return 0;
+}
+*/
