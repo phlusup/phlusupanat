@@ -1548,6 +1548,7 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 typedef struct{
     float real, img;
@@ -1579,3 +1580,47 @@ int main() {
 
     return 0;
 }
+*/
+
+/*
+#include<stdio.h>
+#define SIZE 3
+struct student {
+    int id;
+    char name[20];
+    float grade;
+    char major[20];
+};
+
+int main() {
+
+    struct student s[SIZE];
+    int i;
+
+    for(i=0; i<SIZE; i++){
+        printf("Input info for student number %d\n", i+1);
+
+        printf("What is student's id ?");
+        scanf("%d", &s[i].id);
+        printf("What is student's name ?");
+        fflush(stdin);
+        gets(s[i].name);
+        printf("What is student's grade ?");
+        fflush(stdin);
+        scanf("%f", &s[i].grade);
+        printf("What is student's major ?");
+        fflush(stdin);
+        scanf("%s", s[i].major);
+
+    }
+    for(i=0; i<SIZE; i++){
+        printf("Student Number %d\n",i+1);
+        printf("ID %d\n",s[i].id);
+        printf("Name %s\n",s[i].name);
+        printf("Major %s\n",s[i].major);
+        printf("Grade %f\n",s[i].grade);
+    }
+    return 0;
+}
+*/
+
