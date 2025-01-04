@@ -1624,3 +1624,71 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+#define Sub 3
+typedef struct{
+    int dd,mm,yyyy;
+}date;
+
+typedef struct{
+    int course_id;
+    char course_name[50];
+    int credit;
+}subject;
+
+
+struct student {
+    int id;
+    char name[20];
+    float grade;
+    char major[20];
+    date dob;
+    subject course[Sub];
+};
+
+int main() {
+    struct student s;
+    int i;
+
+    printf("What is student's id ? ");
+    scanf("%d", &s.id);
+    printf("What is student's name ? ");
+    fflush(stdin);
+    gets(s.name);
+    printf("What is student's grade ? ");
+    fflush(stdin);
+    scanf("%f", &s.grade);
+    printf("What is student's major ? ");
+    fflush(stdin);
+    scanf("%s", s.major);
+    printf("What is student's Date of birth(dd/mm/yyyy) ? ");
+    scanf("%d/%d/%d", &s.dob.dd, &s.dob.mm, &s.dob.yyyy);
+
+    for(i=0; i<Sub; i++){
+        printf("Dettail of the subject number %d \n", i+1);
+        printf("Course's id : ");
+        scanf("%d", &s.course[i].course_id);
+        printf("Course's name : ");
+        fflush(stdin);
+        scanf("%s", s.course[i].course_name);
+        printf("Course's credit : ");
+        scanf("%d", &s.course[i].credit);
+
+    }
+
+    printf("Student's Details\n");
+    printf("ID : %d Name : %s ", s.id, s.name);
+    printf("Major : %s Grade : %.2f ", s.major, s.grade);
+    printf("Date of birthday : %02d/%02d/%04d \n", s.dob.dd,s.dob.mm,s.dob.yyyy);
+    
+    printf("Take the following courses\n");
+    for(i=0; i<Sub; i++){
+        printf("[%d] %s", s.course[i].course_id, s.course[i].course_name);
+        printf("(%d)\n", s.course[i].credit);
+    }
+
+    
+}
+
+*/
