@@ -1692,3 +1692,80 @@ int main() {
 }
 
 */
+
+
+/*
+#include<stdio.h>
+#define Sub 3
+#define SIZE 3
+
+typedef struct{
+    int course_id;
+    char course_name[50];
+    int credit;
+}subject;
+
+typedef struct{
+    int dd, mm, yyyy;
+}date;
+
+
+struct student{
+    int id;
+    char name[20];
+    float grade;
+    char major[20];
+    date dob;
+};
+
+int main() {
+    struct student s[SIZE];
+    int i,j;
+
+    for(i=0; i<SIZE; i++){
+        printf("What is student's id ? ");
+        scanf("%d", &s[i].id);
+        printf("What is student's name ? ");
+        fflush(stdin);
+        gets(s[i].name);
+        printf("What is student's grade ? ");
+        fflush(stdin);
+        scanf("%f", &s[i].grade);
+        printf("What is student's major ? ");
+        fflush(stdin);
+        scanf("%s", s[i].major);
+        printf("What is student's Date of birth(dd/mm/yyyy) ? ");
+        scanf("%d/%d/%d", &s[i].dob.dd, &s[i].dob.mm, &s[i].dob.yyyy);
+    }
+    struct student highest;
+    highest = s[0];
+    for(j=1; j < SIZE; j++){
+        if(highest.grade < s[j].grade){
+            highest = s[j];
+        }
+    }
+
+    printf("Highest score student\n");
+    printf("ID : %d Name : %s ", highest.id, highest.name);
+    printf("Major : %s Grade : %.2f ", highest.major, highest.grade);
+    printf("Date of birthday : %02d/%02d/%04d \n", highest.dob.dd,highest.dob.mm,highest.dob.yyyy);
+    
+    struct student youngest = s[0];
+    for(j=1; j<SIZE; j++){
+        if(s[j].dob.yyyy > youngest.dob.yyyy){
+            youngest = s[j];
+        } else if(s[j].dob.yyyy == youngest.dob.yyyy && s[j].dob.mm > youngest.dob.mm){
+            youngest = s[j]; 
+        } else if(s[j].dob.yyyy == youngest.dob.yyyy && s[j].dob.mm == youngest.dob.mm && s[j].dob.dd > youngest.dob.dd){
+            youngest = s[j]; 
+        } 
+    }
+    printf("Youngest student\n");
+    printf("ID : %d Name : %s ", youngest.id, youngest.name);
+    printf("Major : %s Grade : %.2f ", youngest.major, youngest.grade);
+    printf("Date of birthday : %02d/%02d/%04d \n", youngest.dob.dd,youngest.dob.mm,youngest.dob.yyyy);
+    
+
+    return 0;
+}
+*/
