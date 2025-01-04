@@ -1492,3 +1492,90 @@ int main() {
     return 0;
 }
 */
+
+/*
+#include<stdio.h>
+typedef struct {
+    char name[20];
+    long id;
+    double gpa;
+}student;
+int main() {
+    student st;
+    printf("Enter your name : ");
+    scanf("%s", st.name);
+    printf("Enter your id : ");
+    scanf("%ld", &st.id);
+    printf("Enter your gpa : ");
+    scanf("%lf", &st.gpa);
+
+    printf("Student's name is %s has id %ld with gpa %.2lf \n", st.name, st.id, st.gpa);
+    return 0;
+}
+*/
+
+/*
+
+#include <stdio.h>
+typedef struct {
+    char name[20];
+    long id;
+    double gpa;
+}student;
+int main() {
+    student st;
+    int i, n;
+    double grade;
+    st.gpa = 0;
+    printf("Enter your name : ");
+    scanf("%s", st.name);
+    printf("Enter your id : ");
+    scanf("%ld", &st.id);
+
+    printf("How many subjects ?  ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++){
+        printf("What is your grade in subject #%d : ", i+1);
+        scanf("%lf", &grade);
+        st.gpa += grade;
+    }
+
+    st.gpa /= n;
+
+    printf("Student's name is %s has id %ld with gpa %.2lf \n", st.name, st.id, st.gpa);
+    return 0;
+}
+*/
+
+#include<stdio.h>
+typedef struct{
+    float real, img;
+}complex;
+int main() {
+    complex x,y,z;
+    printf("Input x \n");
+    printf("Real number : ");
+    scanf("%f", &x.real);
+    printf("Imaginary number : ");
+    scanf("%f", &x.img);
+    printf("Input y \n");
+    printf("Real number : ");
+    scanf("%f", &y.real);
+    printf("Imaginary number : ");
+    scanf("%f", &y.img);
+
+    printf("Adding two number.... \n");
+    z.real = x.real + y.real;
+    z.img = x.img + y.img;
+    printf("z = %.1f + %.1fi \n", z.real, z.img);
+
+    printf("Multiplying two number.... \n");
+    z.real = x.real * y.real - x.img*y.img;
+    z.img = x.img*y.real + x.real*y.img;
+
+    printf("z = %.1f + %.1fi \n", z.real, z.img);
+
+
+    return 0;
+}
