@@ -1769,3 +1769,146 @@ int main() {
     return 0;
 }
 */
+
+// Advnaced Progarmming Language 
+
+
+/*
+#include <stdio.h>
+int main() {
+    int first, second, third;
+
+    printf("First Number : ");
+    scanf("%d", &first);
+    printf("Second Number : ");
+    scanf("%d", &second);
+    printf("Third Number : ");
+    scanf("%d", &third);
+
+
+    if(first < 5){
+        printf("%d\n", 3*first+7);
+    } else {
+        printf("%d\n", 100);
+    } 
+    if(second < 5){
+        printf("%d\n", 3*second+7);
+    } else {
+        printf("%d\n", 100);
+    } 
+    if(third < 5){
+        printf("%d\n", 3*third+7);
+    } else {
+        printf("%d\n", 100);
+    } 
+
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+
+void compute(int value) {
+    if(value < 5) {
+        printf("%d\n", 3*value+7);
+    } else {
+        printf("%d\n", 100);
+    }
+}
+
+int main(){
+    int first, second, third;
+    printf("First Number : ");
+    scanf("%d", &first);
+    printf("Second Number : ");
+    scanf("%d", &second);
+    printf("Third Number : ");
+    scanf("%d", &third);
+
+    compute(first);
+    compute(second);
+    compute(third);
+
+    return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+int square(int); // function prototype
+
+
+
+int main() {
+    int x = 5, y;
+
+    y = square(x); //function call
+
+    printf("y = %d\n", y);
+
+    return 0;
+}
+
+int square(int m) { //function implementation or funtion body
+    return m*m;
+}
+*/
+
+/*
+#include<stdio.h>
+void increment(int, float); // function prototype
+
+int main() {
+    int i = 3;
+    float x = 7.4;
+    increment(i, x); // function call
+    increment(i, x); // function call
+}
+
+void increment(int m, float n){          //function body
+    m += 2;
+    n += 2;
+    printf("m = %d\nn = %.2f\n", m, n );
+}
+*/
+
+
+
+/*
+#include<stdio.h>
+#include<time.h>
+
+int main() {
+    time_t now;
+    //Get current time stamp
+    time(&now);
+    printf("The current timestamp is : %ld \n", now);
+    // Convert time stamp to local time 
+    printf("The current local time is : %s \n", ctime(&now));
+    return 0;
+} 
+*/
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main() {
+    int i, n = 5;
+    time_t t;
+
+    //Intializes random number generator 
+    srand((unsigned) time(&t)); 
+    // Print 5 random numbers from 0 to 9;
+    for( i = 0; i < n; i++){
+        printf("%d\n", rand()%10);
+    }
+
+    return 0;
+}
+*/
+
+
