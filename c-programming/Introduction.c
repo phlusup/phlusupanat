@@ -1911,4 +1911,241 @@ int main() {
 }
 */
 
+/*
+#include<stdio.h>
+#include<ctype.h>
 
+int main() {
+    char country[10] = "Thailand";
+    int i = 0;
+    while(country[i] != NULL){
+        country[i] = toupper(country[i]);
+        i++;
+    }
+    printf("%s\n", country);
+    return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	float x = 9;
+	
+		printf("%.0f cubed is %f\n", x, pow(x, 3));
+		printf("Square root of x is %f\n", sqrt(x));
+		
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+#include <math.h>
+#define PI 3.14159265
+
+int main() {
+	double x, ret, val;
+	
+    x = 90.0;
+	val = PI / 180;
+	ret = sin(x*val);
+	printf("The sine of %.2lf is %.2lf\n", x, ret);
+
+	return 0;
+}
+*/
+
+
+/*
+#include<stdio.h>
+
+void greeting(void); // function protype
+
+int main() {
+    greeting(); // function calll
+    return 0;
+}
+
+void greeting(void) { // function implementation 
+    printf("*************************\n");
+    printf("* Welcome to my program *\n");
+    printf("*************************\n");
+}
+*/
+
+/*
+#include<stdio.h>
+
+void area(void); // function protoype
+
+int main() {
+
+    area(); //function call
+}
+
+void area(void) { //function implementation
+    int w, l;
+    printf("Enter W x L : ");
+    scanf("%dx%d", &w, &l);
+    printf("Area is %d\n", w*l);
+}
+
+*/
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int irand(void);
+
+int main() {
+    int x;
+    x = irand();
+    printf("x = %d\n", x);
+    return 0;
+}
+
+int irand(void){
+    time_t t;
+    srand((unsigned) time(&t));
+    return(rand()%10);
+}
+*/
+
+/*
+
+#include<stdio.h>
+void showdata(char[10], int, float);
+
+int main() {
+    printf("-------------------------------\n");
+    showdata("Robert", 18, 25.5);
+    showdata("John", 32, 29.2);
+    showdata("David", 25, 37.3);
+    return 0;
+}
+
+void showdata(char name[10], int age, float bmi){
+    printf("%10s %5d %3.1f \n", name, age, bmi);
+    printf("-------------------------------\n");
+}
+
+*/
+
+/*
+#include<stdio.h>
+int fac(int);
+
+
+int main() {
+    int n, r, nCr;
+    printf("Enter n : ");
+    scanf("%d", &n);
+    printf("Enter r : ");
+    scanf("%d", &r);
+    nCr = fac(n) / (fac(r)*fac(n-r));
+    printf("nCr = %d\n", nCr); 
+
+    return 0;
+}
+
+
+int fac(int x){
+    long i, f = 1;
+    for( i = x; i > 1; i--){
+        f = f * i;
+    }
+    return f;
+}
+*/
+
+/*
+#include<stdio.h>
+void assign(int, int); // Function Prototype
+
+int a = 1, b = 1; //Global Varaible
+
+int main(){
+    printf("Before calling a function: %d, %d \n", a, b); 
+    assign(a,b); // Function call 
+    printf("After calling a function: %d, %d \n", a, b);
+
+    return 0;
+}
+
+
+void assign(int x, int y){ // function implementation 
+    int a; 
+    a = 5; b = 6;  // a is a local variable of assign and b is a global variable
+    x++ ;
+    printf("In function: %d, %d, %d, %d \n", a, b, x, y);
+}
+*/
+
+
+/*
+#include<stdio.h>
+
+char str[10] = "Banana"; // Global Variable
+char c = 'c'; // Global Variable
+
+
+char replace(int x, char y, char z[10]){  //Fucntion Implementation + Prototype
+    z[x] = y;
+    return z[x];
+}
+
+
+int main() {
+
+    int n = 0; 
+    char c = 'A';
+    c = replace(2, 'c', str); //function call
+
+    printf("%s\n", str);
+    printf("%c\n", c);
+
+}
+*/
+
+/*
+#include<stdio.h>
+char trim[20];
+void test(char[], int, int);
+
+int main() {
+    char str[10] = "Mahidol";
+    test(str, 2, 6);
+    printf("%s\n", trim);
+}
+
+void test(char str[10], int n1, int n2){
+    int i, j = 0;
+    for( i = n1; i <= n2; i++,j++){
+        trim[j] = str[i];
+    }
+}
+*/
+
+#include<stdio.h>
+
+int multiply(int m, int n){
+    int ans;
+    if( n == 1) {
+        ans = m;
+    } else {
+        ans = m + multiply(m, n - 1);
+    }
+    return ans;
+}
+
+int main() {
+    
+    int a;
+    a = multiply(2,5);
+    printf("Answer = %d\n", a);
+}
