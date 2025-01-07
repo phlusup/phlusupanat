@@ -2131,6 +2131,7 @@ void test(char str[10], int n1, int n2){
 }
 */
 
+/*
 #include<stdio.h>
 
 int multiply(int m, int n){
@@ -2149,3 +2150,335 @@ int main() {
     a = multiply(2,5);
     printf("Answer = %d\n", a);
 }
+*/
+
+/*
+#include<stdio.h>
+int fac(int n){
+    int i, fac = 1;
+    for( i = n; i >= 1; i--){
+        fac = fac * i;
+    }
+    return fac;
+}
+
+int main(){
+    int ans;
+    ans = fac(5);
+    printf("%d\n", ans);
+    
+}
+*/
+
+/*
+#include<stdio.h>
+int factorial(int n){
+    if ( n == 1){
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
+
+int main() {
+    int ans;
+    ans = factorial(5);
+    printf("%d\n", ans);
+}
+*/
+
+/*
+#include<stdio.h>
+int factorial(int n){ //fun
+    if ( n == 1){ //simple case
+        return 1;
+    } else {
+        return n * factorial(n-1); // recursive case
+    }
+}
+
+int main() {
+    int n = 5;
+    printf("factorial(%d) = %d \n", n, factorial(n));
+}
+*/
+
+/*
+#include<stdio.h>
+void move(int n, int a, int c, int b); //function prototype
+
+int main() {
+    int disk;
+    printf("How many disk ? ");
+    scanf("%d", &disk);
+    move(disk, 1, 3, 2); //function call
+    return 0;
+}
+
+void move(int n, int a, int c, int b){ //function implementation
+    if ( n > 0) {
+        move(n-1, a, b, c);
+        printf("Move one disk from %d to %d\n", a, c);
+        move(n-1, a, c, b);
+    }
+}
+*/
+
+/*
+#include<stdio.h>
+
+int my_function(int n){
+    if( n == 0 ){
+        return 3;
+    } else {
+        return 1 + my_function(n-1);
+    }
+}
+int main() {
+    int x;
+    x = my_function(5);
+    printf("x = %d\n", x);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int multiple(int a, int b){
+    if( b == 1){
+        return a;
+    } else {
+        return a + multiple(a, b-1);
+    }
+}
+int main() {
+    int a;
+    a = multiple(2,1);
+    printf("result = %d\n", a);
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int power(int a, int b){
+    if ( b == 1 ){
+        return a;
+    } else {
+        return 
+    }
+}
+int main() {
+
+    return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int cubeByValue(int); // function prototype 
+
+int main() {
+    int number = 5, cube_num;
+    printf("The original number is %d\n", number);
+    cube_num = cubeByValue(number);
+    printf("The new number is %d\n", cube_num);
+    return 0;
+}
+int cubeByValue(int n){
+    return n*n*n;
+}
+*/
+
+/*
+#include<stdio.h>
+void cubeByValue(int); // function prototype 
+
+int main() {
+    int number = 5;
+    printf("The original number is %d\n", number);
+    cubeByValue(number);
+    printf("The new number is %d\n", number);
+    return 0;
+}
+void cubeByValue(int n){
+    n = n*n*n;
+}
+*/
+
+
+/*
+#include<stdio.h>
+void cubeByRef2(int *);
+
+int main(){
+    int number = 5;
+    printf("The original number is %d\n", number);
+    cubeByRef2(&number);
+    printf("The new number is %d\n", number);
+    return 0;
+}
+
+void cubeByRef2(int *n){
+    *n = *n * *n * *n;
+}
+*/
+
+/*
+#include<stdio.h>
+
+void increment(int, float); //function prototype
+
+int main(){
+    int i;
+    float x;
+    printf("\nInput an integer number : ");
+    scanf("%d", &i);
+    printf("\nInput an floating number : ");
+    scanf("%f", &x);
+    printf("\n\n(main before calling a function) The numbers are %5d %10.4f\n", i, x);
+    increment(i, x); // function call
+    increment(i, x); // function call
+    printf("\n\n(main after calling a function) The numbers are %5d %10.4f\n", i, x);
+}
+
+void increment(int a, float b){
+    a++;
+    b++;
+}
+*/
+
+
+/*
+
+#include<stdio.h>
+
+void increment(int*, float*); //function prototype
+
+int main(){
+    int i;
+    float x;
+    printf("\nInput an integer number : ");
+    scanf("%d", &i);
+    printf("\nInput an floating number : ");
+    scanf("%f", &x);
+    printf("\n\n(main before calling a function) The numbers are %5d %10.4f\n", i, x);
+    increment(&i, &x); // function call
+    increment(&i, &x); // function call
+    printf("\n\n(main after calling a function) The numbers are %5d %10.4f\n", i, x);
+}
+
+void increment(int *a, float *b){
+    (*a)++;
+    (*b)++;
+}
+*/
+
+/*
+#include<stdio.h>
+void square(int *);
+int main() {
+    int arr[] = {5,6,7};
+    printf("before calling a function = %d\n", *arr);
+    square(arr);
+    printf("after calling a function = %d\n", *arr);
+}
+void square(int *a){
+    *a = *a * *a;
+}
+*/
+
+
+/*
+#include<stdio.h>
+void square_all(int *, int);
+int main() {
+    int i,arr[] = {5,6,7} {
+    printf("before calling a function = %d\n", arr);
+    square_all(arr, 3);
+    printf("after calling a function = %d\n", *arr);
+}
+void square(int *a, int n){
+    int i;
+    for( i = 0; i < n; i++){
+        a[i] = a[i] * a[i];
+    }
+    
+}
+*/
+
+/*
+#include<stdio.h>
+void swap_array(int array[], int x, int y);
+
+int main() {
+	int arr[] = {5, 6, 7}
+	swap_array(arr, 0, 2);
+}
+
+void swap_array(int a[], int x, int y){
+	int t;
+	t = a[x];
+	a[x] = a[y];
+	a[y] = t;
+}
+*/
+
+/*
+#include<stdio.h>
+#define Size 5
+int FindMax(int num[]); //function prototype
+int main() {
+    int max, number[Size] = {11, 22, 8, 36, 13};
+    max = FindMax(number);
+    printf("Maximum number is %d\n", max);
+}
+
+int FindMax(int num[]){
+    int maximum, i = 0;
+    maximum = num[i];
+    for( i = 1; i < Size; i++){
+        if(num[i] > maximum){
+            maximum = num[i];
+        }
+    }
+    return maximum;
+}
+*/
+
+/*
+#include<stdio.h>
+void square(int *);
+
+int main(){
+    int x = 6;
+    printf("x is %d\n", x);
+    square(&x);
+    printf("The squared is %d\n", x);
+}
+
+void square(int *n){
+    *n = *n * *n;
+}
+*/
+
+/*
+
+#include<stdio.h>
+#define SIZE 5
+void half(int[]); //function prototype
+
+int main(){
+    int arr[] = {2, 4, 6, 8, 10};
+    printf("arr[2] is %d\n", arr[2]);
+    half(arr);
+    printf("arr[3] is %d \n", arr[3]);
+}
+
+void half(int a[]){
+    int i;
+    for( i = 0; i < SIZE; i++){
+        a[i] = a[i]/2;
+    }
+}
+*/
