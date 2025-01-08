@@ -2482,3 +2482,183 @@ void half(int a[]){
     }
 }
 */
+
+/*
+#include<stdio.h>
+
+int main() {
+	FILE *fp; // declaration variable 
+	
+	fp = fopen("myfile.txt", "r");
+	if( fp == NULL ){
+			printf("Error! Cannot open file.\n");
+			return(1);
+	}
+	fclose(fp);
+	printf("Close file successfully\n");
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+
+int main() {
+	FILE *fp;
+	char name[10] = "Robert";
+	int age = 18;
+	
+	fp = fopen("myfile.txt", "w"); 
+	fprintf(fp, "%s %d\n", name, age);
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+int main() {
+	FILE *fp;
+	char name[3][10] = {"Robert", "John", "David"};
+	int age[3] = {18, 24, 20};
+	int i;
+	
+	
+	fp = fopen("myfile.txt", "w");
+	for( i = 0; i < 3; i++){
+		fprintf(fp, "%s %d\n", name[i], age[i]);
+	}
+	fclose(fp);
+	return 0;
+}
+*/
+
+
+/*
+#include<stdio.h>
+int main() {
+	FILE *fp;
+	char name[10];
+	int age;
+	
+	fp = fopen("myfile.txt", "r");
+	fscanf(fp, "%s %d", name, &age);
+	printf("%s %d\n", name, age);
+	fclose(fp);
+	return 0;
+}
+*/
+
+
+/*
+#include<stdio.h>
+int main() {
+	FILE *fp;
+	char name[3][10];
+	int age[3];
+	
+	fp = fopen("myfile.txt", "r");
+    for( int i = 0; i < 3; i++){
+        fscanf(fp, "%s %d", name[i], &age[i]);
+	    printf("%s %d\n", name[i], age[i]);
+    }
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+
+#include<stdio.h>
+
+int main() {
+	int ret;
+	ret = rename("mynewfile.txt", "my_file.txt");
+	if ( ret == 0 ) {
+		printf("File renamed successfully\n");	
+	} else {
+		printf("Error! Unable to rename the file\n");
+	}
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+
+int main() {
+	int ret;
+	ret = remove("my_file.txt");
+	if ( ret == 0 ) {
+		printf("File deleted.\n");	
+	} else {
+		printf("Error! Unable to delete the file.\n");
+	}
+	return 0;
+}
+*/
+
+/*
+
+#include <stdio.h>
+
+int main() {
+	FILE *fp;
+	int ch;
+	
+	fp = fopen("myfile.txt", "w+");
+	for( ch = 65; ch <= 90; ch++){
+		fputc(ch, fp);
+	}
+	fclose(fp);
+	return 0;
+}
+
+*/
+
+
+/*
+#include<stdio.h>
+
+int main() {
+	FILE *fp;
+	char c;
+	int i;
+	fp = fopen("myfile.txt", "r");
+	for( i = 0; i < 26; i++ ) {
+		c = fgetc(fp);
+		printf("%c", c);
+	}
+	printf("\n");
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main() {
+	FILE *fp;
+	char str[10] = "Mahidol";
+	fp = fopen("myfile.txt", "a");
+	fputs(str, fp);
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main() {
+	FILE *fp;
+	char str[10];
+	fp = fopen("myfile.txt", "r");
+	fgets(str,10,fp);
+    printf("%s\n", str);
+	fclose(fp);
+	return 0;
+}
+*/
+
