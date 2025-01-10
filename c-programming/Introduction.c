@@ -3196,3 +3196,67 @@ int guess( char curr[], char word[]) {
     return t;
 }
 */
+
+/*
+#include <stdio.h>
+int n = 4;
+int test(int x){
+	printf("n = %d, ", n);
+	return x += n;
+}
+
+int main() {
+	int n = 2;
+	n = test(test(n));
+	printf("n = %d\n", n);
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+void square(int);
+int main() {
+	int x = 5;
+	printf("%3d", x);
+	square(x);
+	printf("%3d\n", x);
+}
+void square(int a) {
+	a = a * a;
+	printf("%3d", a);
+}
+*/
+
+/*
+#include<stdio.h>
+void square(int *);
+int main() {
+	int x = 4;
+	printf("%3d", x);
+	square(&x);
+	printf("%3d", x);
+}
+void square(int *a) {
+	*a = *a * *a;
+	printf("%3d", *a);
+}
+*/
+
+/*
+#include<stdio.h>
+void square(int [], int);
+int main() {
+	int x[] = {1, 3, 4, 5}, i;
+	for( i = 0; i < 4; i++)
+			printf("%3d", x[i]);
+	square(x,3);
+	
+	for( i = 0; i < 4; i++)
+			printf("%3d", x[i]);
+}
+void square(int a[], int n) {
+	int i;
+	for( i = 0; i < n; i++) a[i] *= a[i];
+}
+*/
