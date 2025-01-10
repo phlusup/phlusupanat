@@ -2662,3 +2662,173 @@ int main() {
 }
 */
 
+/*
+
+#include <stdio.h>
+int main() {
+	FILE *fp;
+	int num;
+	if ( (fp = fopen("myfile.txt", "r")) == NULL ){
+			printf("Error! Cannot open file. \n");
+			return 1;
+	}
+	while(!feof(fp)){
+		fscanf(fp, "%d", &num);
+		printf("%d \n", num);
+	}
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+
+#include <stdio.h>
+int main() {
+    FILE *fp;
+	char ch;
+	if ( (fp = fopen("myfile.txt", "r")) == NULL ){
+		printf("Error! Cannot open file. \n");
+		return 1;
+	}
+	while(1) {
+		ch = fgetc(fp);
+		if ( ch == EOF ) break;
+		printf("%c", ch);
+	}
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+	FILE *fp;
+	char ch;
+	int position;
+	if ( (fp = fopen("data.txt", "r")) == NULL ) {
+			printf("Error! Cannot open file. \n");
+			return 1;
+	}
+	while(1) {
+		ch = fgetc(fp);
+		if ( ch == 'c') break;
+		printf("%c", ch);
+	}
+	position  = ftell(fp);
+	printf("\nThe current position is %d.\n", position);
+	fclose(fp);
+	return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+int main()  {
+	FILE *f;
+	f = fopen("data.txt", "r");
+	if ( f == NULL ){
+			printf("Error! Cannot open file. \n");
+			return 1;
+	}
+	fseek(f, 0, SEEK_END);
+	printf("1. The current position : %2ld bytes \n", ftell(f));
+	
+	fseek(f, -3, SEEK_END);
+	printf("2. The current position : %2ld bytes ", ftell(f));
+	printf("--------> %c \n", fgetc(f));
+	
+	fseek(f, 0, SEEK_SET);
+	printf("3. The current position : %2ld bytes \n", ftell(f));
+	
+	fseek(f, 5, SEEK_SET);
+	printf("4. The current position : %2ld bytes ", ftell(f));
+    printf("--------> %c \n", fgetc(f));
+
+    fseek(f, 5, SEEK_CUR);
+	printf("5. The current position : %2ld bytes \n", ftell(f));
+	return 0;
+}
+*/
+
+/*
+#include<stdio.h>
+int main() {
+	FILE *f;
+	f = fopen("data.txt", "r");
+	if( f == NULL ){
+			printf("Can't open file or file doesn't exist. \n");
+			return 1;
+	}
+	fseek(f, 0, SEEK_END);
+	printf("The size of file : %ld bytes \n", ftell(f));
+	rewind(f);
+	printf("The current position : %ld bytes \n", ftell(f));
+	return 0;
+}
+
+*/
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+	FILE *f;
+
+    //Create File
+	f = fopen("temp.txt", "w");
+	if ( f == NULL ){
+		printf("Can't open file or file doesn't exist. \n");
+		return 1;
+	}
+	fprintf(f,"We love programming.");
+	printf("File created. \n");
+	fclose(f);
+
+    // Read
+	f = fopen("temp.txt", "r");
+	if ( f == NULL ){
+		printf("Can't open file or file doesn't exist. \n");
+		return 1;
+	}
+	printf("File exists. \n");
+	fclose(f);
+	
+    // Rename 
+    rename("temp.txt", "top.txt");
+    f = fopen("top.txt", "r");
+	if ( f == NULL ){
+		printf("Can't open file or file doesn't exist. \n");
+		return 1;
+	}
+	printf("File exits. \n");
+	fclose(f);
+
+    //Remove 
+    remove("top.txt");
+
+    f = fopen("top.txt", "r");
+	if ( f == NULL ){
+		printf("Can't open file or file doesn't exist. \n");
+		return 1;
+	}
+	printf("File exits. \n");
+	fclose(f);
+    return 0;
+}
+*/
+
+#include<stdio.h>
+int main() {
+	FILE *fp;
+	char str[10];
+	fp = fopen("sample.txt", "r+");
+	if (!fp) {
+		printf("Cannot open file. \n");
+		return 1;
+	}
+	fgets(str, 4, fp);
+	printf("%s\n", str);
+	return 0;
+}
