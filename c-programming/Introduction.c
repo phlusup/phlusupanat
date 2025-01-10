@@ -2819,6 +2819,7 @@ int main() {
 }
 */
 
+/*
 #include<stdio.h>
 int main() {
 	FILE *fp;
@@ -2832,3 +2833,102 @@ int main() {
 	printf("%s\n", str);
 	return 0;
 }
+*/
+/*
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+void main() {
+    char word[20] = "superman", curr[20] = "";
+    char ch;
+    int i, t, count;
+    count = 0;
+    for (i = 0; i < strlen(word); i++)
+        curr[i] = '_';
+    curr[i] = '\0';
+    do {
+        system("cls");
+        printf("----- \n");
+        printf("|   | \n");
+        switch (count)
+        {
+        case 0;
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            break;
+        case 1;
+            printf("|    0  \n");
+            printf("|       \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 2;
+            printf("|    0  \n");
+            printf("|    |  \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 3;
+            printf("|    0  \n");
+            printf("|   /|  \n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 4;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 5;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|       \n"); 
+            break;
+        case 6;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   /   \n"); 
+            break;
+        case 7;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   / \\\n"); 
+            break;
+        }
+        printf("|         \n\n");
+        for ( i = 0; i < strlen(word); i++)
+                printf("%c ", curr[i])
+        printf("\n");
+
+        if( count == 7){
+            printf("===== You Die ===== \n");
+            printf("Answer is \"%s\"\n", word);
+            count ++;
+        }
+        else if( strcmp(curr,word) == 0){
+            printf("***** You win *****\n");
+            count = 9;
+        }
+        else {
+            ch = getch();
+            t = 0;
+            for(i = 0; i <strlen(word); i++){
+                if (word[i] == ch){
+                    curr[i] == word[i];
+                    t = 1;
+                }
+            }
+            if (t == 0) count++;
+        }
+    }   
+    while(count <= 7);
+    getch();
+}
+*/
