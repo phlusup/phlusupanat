@@ -2932,3 +2932,267 @@ void main() {
     getch();
 }
 */
+
+/*
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void print_hangman(int);
+void set_curr( char[], char[]);
+int guess( char[], char[]);
+void print_word( char[] );
+int check_word( char[], char[] );
+
+int main() {
+    char word[20] = "university", curr[20] = "";
+    int count;
+    count = 0;
+    set_curr(curr, word);
+    do {
+        print_hangman(count);
+        print_word(curr);
+        if(check_word(curr, word) == 0){
+            if(guess(curr,word) == 0) count++;
+        }
+        else break;
+    }
+    while(count < 7);
+}
+void set_curr( char curr[], char word[]){
+    int i;
+    for( i = 0; i < strlen(word); i++)
+        curr[i] = '_';
+    curr[i] = '\0';
+}
+void print_hangman(int count){
+        system("cls");
+        printf("----- \n");
+        printf("|   | \n");
+        switch (count)
+        {
+        case 0;
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            break;
+        case 1;
+            printf("|    0  \n");
+            printf("|       \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 2;
+            printf("|    0  \n");
+            printf("|    |  \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 3;
+            printf("|    0  \n");
+            printf("|   /|  \n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 4;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 5;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|       \n"); 
+            break;
+        case 6;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   /   \n"); 
+            break;
+        case 7;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   / \\\n"); 
+            break;
+        }
+    }
+void print_word(char curr[]) {
+    int i;
+    for(i = 0; i < strlen(curr); i++)
+        printf("%c ", curr[i])
+    printf("\n");
+}
+
+int check_word( char curr[], char word[]){
+    if(strcmp(curr, word) == 0){
+        printf("***** You Win *****\n");
+        return 1;
+    } else {
+        return 0;
+    }
+}
+int guess( char curr[], char word[]) {
+    int i, t = 0;
+    char ch;
+    ch = getch();
+    for( i = 0; i < strlen(word); i++){
+        if ( word[i] == ch ){
+            curr[i] = word[i];
+            t = 1;
+        }
+    }
+    return t;
+}
+*/
+
+/*
+#define SIZE 3
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void print_hangman(int);
+void set_curr( char[], char[]);
+int guess( char[], char[]);
+void print_word( char[] );
+int check_word( char[], char[] );
+
+struct play {
+    char word[20];
+    char curr[20];
+    char count;
+    int die;
+};
+
+int main() {
+    struct play user[SIZE];
+    FILE *f;
+    int i,j;
+    f = fopen("word.txt", "r");
+    for( i = 0; i < SIZE; i++){
+        fscanf(f, "%s\n", user[i].word);
+        set_curr(user[i].curr, user[i].word);
+        user[i].count = 0;
+        user[i].die = 0;
+    }
+    fclose(f);
+
+    int win = 0, die = 0;
+    while( die < SIZE && win == 0){
+        for (  i = 0; i < SIZE; i++){
+            if( user[i].die == 0){
+                printf_hangman(user[i].count);
+                if( check_word( user[i].curr, user[i].word) == 0){
+                    printf("==User %d's turn ==\n", i+1);
+                    if( guess(user[i].curr, user[i].word) == 0) user[i].count++;
+
+                print_hangman(user[i].count);
+                print_word(user[i].curr);
+                getch();
+
+                }
+                else {
+                    win = i;
+                    break;
+                }
+            
+            }
+        }
+    }
+void set_curr( char curr[], char word[]){
+    int i;
+    for( i = 0; i < strlen(word); i++)
+        curr[i] = '_';
+    curr[i] = '\0';
+}
+void print_hangman(int count){
+        system("cls");
+        printf("----- \n");
+        printf("|   | \n");
+        switch (count)
+        {
+        case 0;
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            printf("|   \n");
+            break;
+        case 1;
+            printf("|    0  \n");
+            printf("|       \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 2;
+            printf("|    0  \n");
+            printf("|    |  \n");
+            printf("|       \n");
+            printf("|       \n");
+            break;
+        case 3;
+            printf("|    0  \n");
+            printf("|   /|  \n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 4;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|       \n");
+            printf("|       \n"); 
+            break;
+        case 5;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|       \n"); 
+            break;
+        case 6;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   /   \n"); 
+            break;
+        case 7;
+            printf("|    0  \n");
+            printf("|   /|\\\n");
+            printf("|    |  \n");
+            printf("|   / \\\n"); 
+            break;
+        }
+    }
+void print_word(char curr[]) {
+    int i;
+    for(i = 0; i < strlen(curr); i++)
+        printf("%c ", curr[i])
+    printf("\n");
+}
+
+int check_word( char curr[], char word[]){
+    if(strcmp(curr, word) == 0){
+        printf("***** You Win *****\n");
+        return 1;
+    } else {
+        return 0;
+    }
+}
+int guess( char curr[], char word[]) {
+    int i, t = 0;
+    char ch;
+    ch = getch();
+    for( i = 0; i < strlen(word); i++){
+        if ( word[i] == ch ){
+            curr[i] = word[i];
+            t = 1;
+        }
+    }
+    return t;
+}
+*/
